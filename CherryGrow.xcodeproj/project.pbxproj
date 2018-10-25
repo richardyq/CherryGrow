@@ -27,6 +27,14 @@
 		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
 		25F7CFC421817733001C19A3 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F7CFC321817733001C19A3 /* UserList.plist */; };
 		25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCB21819895001C19A3 /* MainStartViewController.m */; };
+		25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */; };
+		25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFD32181AB3C001C19A3 /* TodayStartViewController.m */; };
+		25F7CFDA2181AD6B001C19A3 /* TagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFD62181AD6B001C19A3 /* TagView.m */; };
+		25F7CFDB2181AD6B001C19A3 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFD92181AD6B001C19A3 /* TagViewController.m */; };
+		25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFDE2181AEAD001C19A3 /* MealSituationStartViewController.m */; };
+		25F7CFE52181AF1B001C19A3 /* SleepSituationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFE42181AF1B001C19A3 /* SleepSituationStartViewController.m */; };
+		25F7CFE82181AF3C001C19A3 /* StudySituationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFE72181AF3C001C19A3 /* StudySituationStartViewController.m */; };
+		25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFEA2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m */; };
 		25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */; };
 		25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35A21802025006C8588 /* NSObject+AlertExt.m */; };
 		25FAA35E2180248E006C8588 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35D2180248E006C8588 /* UserModel.m */; };
@@ -71,6 +79,22 @@
 		25F7CFC321817733001C19A3 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
 		25F7CFCA21819895001C19A3 /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
 		25F7CFCB21819895001C19A3 /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
+		25F7CFCD2181A2CC001C19A3 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		25F7CFD22181AB3C001C19A3 /* TodayStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayStartViewController.h; sourceTree = "<group>"; };
+		25F7CFD32181AB3C001C19A3 /* TodayStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayStartViewController.m; sourceTree = "<group>"; };
+		25F7CFD62181AD6B001C19A3 /* TagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagView.m; sourceTree = "<group>"; };
+		25F7CFD72181AD6B001C19A3 /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
+		25F7CFD82181AD6B001C19A3 /* TagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagView.h; sourceTree = "<group>"; };
+		25F7CFD92181AD6B001C19A3 /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
+		25F7CFDD2181AEAD001C19A3 /* MealSituationStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituationStartViewController.h; sourceTree = "<group>"; };
+		25F7CFDE2181AEAD001C19A3 /* MealSituationStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationStartViewController.m; sourceTree = "<group>"; };
+		25F7CFE32181AF1B001C19A3 /* SleepSituationStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepSituationStartViewController.h; sourceTree = "<group>"; };
+		25F7CFE42181AF1B001C19A3 /* SleepSituationStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepSituationStartViewController.m; sourceTree = "<group>"; };
+		25F7CFE62181AF3B001C19A3 /* StudySituationStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudySituationStartViewController.h; sourceTree = "<group>"; };
+		25F7CFE72181AF3C001C19A3 /* StudySituationStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudySituationStartViewController.m; sourceTree = "<group>"; };
+		25F7CFE92181AF66001C19A3 /* GeneralSituationStartCommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralSituationStartCommonViewController.h; sourceTree = "<group>"; };
+		25F7CFEA2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralSituationStartCommonViewController.m; sourceTree = "<group>"; };
 		25FAA35621801D48006C8588 /* UIImage+ShapeExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ShapeExt.h"; sourceTree = "<group>"; };
 		25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ShapeExt.m"; sourceTree = "<group>"; };
 		25FAA35921802025006C8588 /* NSObject+AlertExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AlertExt.h"; sourceTree = "<group>"; };
@@ -114,6 +138,7 @@
 		253C5526217FFFC200BC3DDB /* CherryGrow */ = {
 			isa = PBXGroup;
 			children = (
+				25F7CFD02181AB09001C19A3 /* 今日表现 */,
 				25F7CFC52181985D001C19A3 /* 主界面 */,
 				253C55512180064C00BC3DDB /* 用户 */,
 				253C553F2180012C00BC3DDB /* 公用 */,
@@ -150,6 +175,7 @@
 		253C553F2180012C00BC3DDB /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
+				25F7CFD52181AD6B001C19A3 /* TagView */,
 				253C55632180102E00BC3DDB /* CommonView */,
 				253C555B218008D500BC3DDB /* CommonFunc */,
 				253C5545218001F900BC3DDB /* SupportFiles */,
@@ -166,6 +192,8 @@
 				253C55422180015D00BC3DDB /* NSObject+RootControllerExt.m */,
 				253C5547218002BB00BC3DDB /* PageViewControllerManager.h */,
 				253C5548218002BB00BC3DDB /* PageViewControllerManager.m */,
+				25F7CFCD2181A2CC001C19A3 /* BaseNavigationController.h */,
+				25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */,
 			);
 			path = PageViewControllerManager;
 			sourceTree = "<group>";
@@ -278,6 +306,74 @@
 				25F7CFCB21819895001C19A3 /* MainStartViewController.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		25F7CFD02181AB09001C19A3 /* 今日表现 */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFD12181AB14001C19A3 /* UI */,
+			);
+			path = "今日表现";
+			sourceTree = "<group>";
+		};
+		25F7CFD12181AB14001C19A3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFE12181AED1001C19A3 /* 其他 */,
+				25F7CFE22181AED1001C19A3 /* 学习情况 */,
+				25F7CFE02181AEC4001C19A3 /* 睡眠情况 */,
+				25F7CFDC2181AE87001C19A3 /* 吃饭情况 */,
+				25F7CFD22181AB3C001C19A3 /* TodayStartViewController.h */,
+				25F7CFD32181AB3C001C19A3 /* TodayStartViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		25F7CFD52181AD6B001C19A3 /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFD82181AD6B001C19A3 /* TagView.h */,
+				25F7CFD62181AD6B001C19A3 /* TagView.m */,
+				25F7CFD72181AD6B001C19A3 /* TagViewController.h */,
+				25F7CFD92181AD6B001C19A3 /* TagViewController.m */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
+		25F7CFDC2181AE87001C19A3 /* 吃饭情况 */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFDD2181AEAD001C19A3 /* MealSituationStartViewController.h */,
+				25F7CFDE2181AEAD001C19A3 /* MealSituationStartViewController.m */,
+			);
+			path = "吃饭情况";
+			sourceTree = "<group>";
+		};
+		25F7CFE02181AEC4001C19A3 /* 睡眠情况 */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFE32181AF1B001C19A3 /* SleepSituationStartViewController.h */,
+				25F7CFE42181AF1B001C19A3 /* SleepSituationStartViewController.m */,
+			);
+			path = "睡眠情况";
+			sourceTree = "<group>";
+		};
+		25F7CFE12181AED1001C19A3 /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFE92181AF66001C19A3 /* GeneralSituationStartCommonViewController.h */,
+				25F7CFEA2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		25F7CFE22181AED1001C19A3 /* 学习情况 */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFE62181AF3B001C19A3 /* StudySituationStartViewController.h */,
+				25F7CFE72181AF3C001C19A3 /* StudySituationStartViewController.m */,
+			);
+			path = "学习情况";
 			sourceTree = "<group>";
 		};
 		2C9E453952D9974427A2D01A /* Frameworks */ = {
@@ -429,18 +525,26 @@
 				253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */,
 				25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */,
 				253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */,
+				25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */,
 				25FAA35E2180248E006C8588 /* UserModel.m in Sources */,
+				25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */,
 				253C555A2180070C00BC3DDB /* UserUtil.m in Sources */,
 				253C5537217FFFC200BC3DDB /* main.m in Sources */,
 				25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */,
+				25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */,
 				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
 				253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */,
 				25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */,
 				253C55502180039F00BC3DDB /* InitializationUtil.m in Sources */,
+				25F7CFDB2181AD6B001C19A3 /* TagViewController.m in Sources */,
 				253C554C218002E900BC3DDB /* InitializationViewController.m in Sources */,
+				25F7CFE82181AF3C001C19A3 /* StudySituationStartViewController.m in Sources */,
 				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
 				253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */,
+				25F7CFE52181AF1B001C19A3 /* SleepSituationStartViewController.m in Sources */,
+				25F7CFDA2181AD6B001C19A3 /* TagView.m in Sources */,
 				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,
+				25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseNavigationController.h"
 
 @interface PageViewControllerManager : NSObject
 
