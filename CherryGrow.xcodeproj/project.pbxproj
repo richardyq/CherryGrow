@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C52B1930FDB9738DD3480FE /* libPods-CherryGrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF96083E32B222C796C74C1 /* libPods-CherryGrow.a */; };
+		253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C5528217FFFC200BC3DDB /* AppDelegate.m */; };
+		253C552F217FFFC200BC3DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253C552D217FFFC200BC3DDB /* Main.storyboard */; };
+		253C5531217FFFC200BC3DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253C5530217FFFC200BC3DDB /* Assets.xcassets */; };
+		253C5534217FFFC200BC3DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253C5532217FFFC200BC3DDB /* LaunchScreen.storyboard */; };
+		253C5537217FFFC200BC3DDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C5536217FFFC200BC3DDB /* main.m */; };
+		253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55422180015D00BC3DDB /* NSObject+RootControllerExt.m */; };
+		253C5549218002BB00BC3DDB /* PageViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C5548218002BB00BC3DDB /* PageViewControllerManager.m */; };
+		253C554C218002E900BC3DDB /* InitializationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C554B218002E900BC3DDB /* InitializationViewController.m */; };
+		253C55502180039F00BC3DDB /* InitializationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C554F2180039F00BC3DDB /* InitializationUtil.m */; };
+		253C55572180066F00BC3DDB /* UserAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55562180066F00BC3DDB /* UserAccountModel.m */; };
+		253C555A2180070C00BC3DDB /* UserUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55592180070C00BC3DDB /* UserUtil.m */; };
+		253C555E218008DF00BC3DDB /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C555D218008DF00BC3DDB /* UserDefaults.m */; };
+		253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55652180104300BC3DDB /* UIView+SubViewExt.m */; };
+		253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55682180108500BC3DDB /* UIViewController+SubViewExt.m */; };
+		253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556B218010B900BC3DDB /* UIView+BoarderExt.m */; };
+		253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556E218011B000BC3DDB /* UIColor+StandardExt.m */; };
+		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
+		25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */; };
+		25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35A21802025006C8588 /* NSObject+AlertExt.m */; };
+		25FAA35E2180248E006C8588 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35D2180248E006C8588 /* UserModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14575877C4509DB436210A58 /* Pods-CherryGrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrow/Pods-CherryGrow.debug.xcconfig"; sourceTree = "<group>"; };
+		253C5524217FFFC200BC3DDB /* CherryGrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CherryGrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		253C5527217FFFC200BC3DDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		253C5528217FFFC200BC3DDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		253C552E217FFFC200BC3DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		253C5530217FFFC200BC3DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		253C5533217FFFC200BC3DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		253C5535217FFFC200BC3DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253C5536217FFFC200BC3DDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		253C55412180015D00BC3DDB /* NSObject+RootControllerExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RootControllerExt.h"; sourceTree = "<group>"; };
+		253C55422180015D00BC3DDB /* NSObject+RootControllerExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RootControllerExt.m"; sourceTree = "<group>"; };
+		253C55442180018100BC3DDB /* CGCommonInc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGCommonInc.h; sourceTree = "<group>"; };
+		253C55462180020600BC3DDB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		253C5547218002BB00BC3DDB /* PageViewControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewControllerManager.h; sourceTree = "<group>"; };
+		253C5548218002BB00BC3DDB /* PageViewControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewControllerManager.m; sourceTree = "<group>"; };
+		253C554A218002E900BC3DDB /* InitializationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitializationViewController.h; sourceTree = "<group>"; };
+		253C554B218002E900BC3DDB /* InitializationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitializationViewController.m; sourceTree = "<group>"; };
+		253C554E2180039F00BC3DDB /* InitializationUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitializationUtil.h; sourceTree = "<group>"; };
+		253C554F2180039F00BC3DDB /* InitializationUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitializationUtil.m; sourceTree = "<group>"; };
+		253C55552180066F00BC3DDB /* UserAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAccountModel.h; sourceTree = "<group>"; };
+		253C55562180066F00BC3DDB /* UserAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAccountModel.m; sourceTree = "<group>"; };
+		253C55582180070C00BC3DDB /* UserUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserUtil.h; sourceTree = "<group>"; };
+		253C55592180070C00BC3DDB /* UserUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserUtil.m; sourceTree = "<group>"; };
+		253C555C218008DF00BC3DDB /* UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		253C555D218008DF00BC3DDB /* UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
+		253C55642180104300BC3DDB /* UIView+SubViewExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SubViewExt.h"; sourceTree = "<group>"; };
+		253C55652180104300BC3DDB /* UIView+SubViewExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SubViewExt.m"; sourceTree = "<group>"; };
+		253C55672180108500BC3DDB /* UIViewController+SubViewExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SubViewExt.h"; sourceTree = "<group>"; };
+		253C55682180108500BC3DDB /* UIViewController+SubViewExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SubViewExt.m"; sourceTree = "<group>"; };
+		253C556A218010B900BC3DDB /* UIView+BoarderExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BoarderExt.h"; sourceTree = "<group>"; };
+		253C556B218010B900BC3DDB /* UIView+BoarderExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BoarderExt.m"; sourceTree = "<group>"; };
+		253C556D218011B000BC3DDB /* UIColor+StandardExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+StandardExt.h"; sourceTree = "<group>"; };
+		253C556E218011B000BC3DDB /* UIColor+StandardExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StandardExt.m"; sourceTree = "<group>"; };
+		253C55712180128000BC3DDB /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
+		253C55722180128000BC3DDB /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		25FAA35621801D48006C8588 /* UIImage+ShapeExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ShapeExt.h"; sourceTree = "<group>"; };
+		25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ShapeExt.m"; sourceTree = "<group>"; };
+		25FAA35921802025006C8588 /* NSObject+AlertExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AlertExt.h"; sourceTree = "<group>"; };
+		25FAA35A21802025006C8588 /* NSObject+AlertExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AlertExt.m"; sourceTree = "<group>"; };
+		25FAA35C2180248E006C8588 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		25FAA35D2180248E006C8588 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		4EF96083E32B222C796C74C1 /* libPods-CherryGrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CherryGrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6773EEE0CB4F709782235FA8 /* Pods-CherryGrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrow/Pods-CherryGrow.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		253C5521217FFFC200BC3DDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C52B1930FDB9738DD3480FE /* libPods-CherryGrow.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		253C551B217FFFC200BC3DDB = {
+			isa = PBXGroup;
+			children = (
+				253C5526217FFFC200BC3DDB /* CherryGrow */,
+				253C5525217FFFC200BC3DDB /* Products */,
+				8C2C390B7988E084CD61E704 /* Pods */,
+				2C9E453952D9974427A2D01A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		253C5525217FFFC200BC3DDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				253C5524217FFFC200BC3DDB /* CherryGrow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		253C5526217FFFC200BC3DDB /* CherryGrow */ = {
+			isa = PBXGroup;
+			children = (
+				253C55512180064C00BC3DDB /* 用户 */,
+				253C553F2180012C00BC3DDB /* 公用 */,
+				253C553D2180010D00BC3DDB /* 初始化 */,
+				253C5527217FFFC200BC3DDB /* AppDelegate.h */,
+				253C5528217FFFC200BC3DDB /* AppDelegate.m */,
+				253C552D217FFFC200BC3DDB /* Main.storyboard */,
+				253C5530217FFFC200BC3DDB /* Assets.xcassets */,
+				253C5532217FFFC200BC3DDB /* LaunchScreen.storyboard */,
+				253C5535217FFFC200BC3DDB /* Info.plist */,
+				253C5536217FFFC200BC3DDB /* main.m */,
+			);
+			path = CherryGrow;
+			sourceTree = "<group>";
+		};
+		253C553D2180010D00BC3DDB /* 初始化 */ = {
+			isa = PBXGroup;
+			children = (
+				253C554D2180038A00BC3DDB /* Util */,
+				253C553E2180010D00BC3DDB /* UI */,
+			);
+			path = "初始化";
+			sourceTree = "<group>";
+		};
+		253C553E2180010D00BC3DDB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				253C554A218002E900BC3DDB /* InitializationViewController.h */,
+				253C554B218002E900BC3DDB /* InitializationViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		253C553F2180012C00BC3DDB /* 公用 */ = {
+			isa = PBXGroup;
+			children = (
+				253C55632180102E00BC3DDB /* CommonView */,
+				253C555B218008D500BC3DDB /* CommonFunc */,
+				253C5545218001F900BC3DDB /* SupportFiles */,
+				253C55402180014400BC3DDB /* PageViewControllerManager */,
+				253C55442180018100BC3DDB /* CGCommonInc.h */,
+			);
+			path = "公用";
+			sourceTree = "<group>";
+		};
+		253C55402180014400BC3DDB /* PageViewControllerManager */ = {
+			isa = PBXGroup;
+			children = (
+				253C55412180015D00BC3DDB /* NSObject+RootControllerExt.h */,
+				253C55422180015D00BC3DDB /* NSObject+RootControllerExt.m */,
+				253C5547218002BB00BC3DDB /* PageViewControllerManager.h */,
+				253C5548218002BB00BC3DDB /* PageViewControllerManager.m */,
+			);
+			path = PageViewControllerManager;
+			sourceTree = "<group>";
+		};
+		253C5545218001F900BC3DDB /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				253C55462180020600BC3DDB /* PrefixHeader.pch */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		253C554D2180038A00BC3DDB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				253C554E2180039F00BC3DDB /* InitializationUtil.h */,
+				253C554F2180039F00BC3DDB /* InitializationUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		253C55512180064C00BC3DDB /* 用户 */ = {
+			isa = PBXGroup;
+			children = (
+				253C55522180064C00BC3DDB /* UI */,
+				253C55532180064C00BC3DDB /* Util */,
+				253C55542180064C00BC3DDB /* DataModel */,
+			);
+			path = "用户";
+			sourceTree = "<group>";
+		};
+		253C55522180064C00BC3DDB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				253C55702180128000BC3DDB /* 登录 */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		253C55532180064C00BC3DDB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				253C55582180070C00BC3DDB /* UserUtil.h */,
+				253C55592180070C00BC3DDB /* UserUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		253C55542180064C00BC3DDB /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				253C55552180066F00BC3DDB /* UserAccountModel.h */,
+				253C55562180066F00BC3DDB /* UserAccountModel.m */,
+				25FAA35C2180248E006C8588 /* UserModel.h */,
+				25FAA35D2180248E006C8588 /* UserModel.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		253C555B218008D500BC3DDB /* CommonFunc */ = {
+			isa = PBXGroup;
+			children = (
+				253C555C218008DF00BC3DDB /* UserDefaults.h */,
+				253C555D218008DF00BC3DDB /* UserDefaults.m */,
+			);
+			path = CommonFunc;
+			sourceTree = "<group>";
+		};
+		253C55632180102E00BC3DDB /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				253C55642180104300BC3DDB /* UIView+SubViewExt.h */,
+				253C55652180104300BC3DDB /* UIView+SubViewExt.m */,
+				253C55672180108500BC3DDB /* UIViewController+SubViewExt.h */,
+				253C55682180108500BC3DDB /* UIViewController+SubViewExt.m */,
+				253C556A218010B900BC3DDB /* UIView+BoarderExt.h */,
+				253C556B218010B900BC3DDB /* UIView+BoarderExt.m */,
+				253C556D218011B000BC3DDB /* UIColor+StandardExt.h */,
+				253C556E218011B000BC3DDB /* UIColor+StandardExt.m */,
+				25FAA35621801D48006C8588 /* UIImage+ShapeExt.h */,
+				25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */,
+				25FAA35921802025006C8588 /* NSObject+AlertExt.h */,
+				25FAA35A21802025006C8588 /* NSObject+AlertExt.m */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		253C55702180128000BC3DDB /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				253C55712180128000BC3DDB /* UserLoginViewController.h */,
+				253C55722180128000BC3DDB /* UserLoginViewController.m */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		2C9E453952D9974427A2D01A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EF96083E32B222C796C74C1 /* libPods-CherryGrow.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C2C390B7988E084CD61E704 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14575877C4509DB436210A58 /* Pods-CherryGrow.debug.xcconfig */,
+				6773EEE0CB4F709782235FA8 /* Pods-CherryGrow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		253C5523217FFFC200BC3DDB /* CherryGrow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 253C553A217FFFC200BC3DDB /* Build configuration list for PBXNativeTarget "CherryGrow" */;
+			buildPhases = (
+				410254E80C175B20ED2FC368 /* [CP] Check Pods Manifest.lock */,
+				253C5520217FFFC200BC3DDB /* Sources */,
+				253C5521217FFFC200BC3DDB /* Frameworks */,
+				253C5522217FFFC200BC3DDB /* Resources */,
+				EB21C6A2706BA74BC38FA1E7 /* [CP] Embed Pods Frameworks */,
+				53644D095618C1F80372ADF3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CherryGrow;
+			productName = CherryGrow;
+			productReference = 253C5524217FFFC200BC3DDB /* CherryGrow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		253C551C217FFFC200BC3DDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = YinQ;
+				TargetAttributes = {
+					253C5523217FFFC200BC3DDB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 253C551F217FFFC200BC3DDB /* Build configuration list for PBXProject "CherryGrow" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 253C551B217FFFC200BC3DDB;
+			productRefGroup = 253C5525217FFFC200BC3DDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				253C5523217FFFC200BC3DDB /* CherryGrow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		253C5522217FFFC200BC3DDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253C5534217FFFC200BC3DDB /* LaunchScreen.storyboard in Resources */,
+				253C5531217FFFC200BC3DDB /* Assets.xcassets in Resources */,
+				253C552F217FFFC200BC3DDB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		410254E80C175B20ED2FC368 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CherryGrow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53644D095618C1F80372ADF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CherryGrow/Pods-CherryGrow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB21C6A2706BA74BC38FA1E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CherryGrow/Pods-CherryGrow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		253C5520217FFFC200BC3DDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253C5549218002BB00BC3DDB /* PageViewControllerManager.m in Sources */,
+				253C555E218008DF00BC3DDB /* UserDefaults.m in Sources */,
+				253C55572180066F00BC3DDB /* UserAccountModel.m in Sources */,
+				253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */,
+				253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */,
+				25FAA35E2180248E006C8588 /* UserModel.m in Sources */,
+				253C555A2180070C00BC3DDB /* UserUtil.m in Sources */,
+				253C5537217FFFC200BC3DDB /* main.m in Sources */,
+				25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */,
+				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
+				253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */,
+				25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */,
+				253C55502180039F00BC3DDB /* InitializationUtil.m in Sources */,
+				253C554C218002E900BC3DDB /* InitializationViewController.m in Sources */,
+				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
+				253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */,
+				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		253C552D217FFFC200BC3DDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				253C552E217FFFC200BC3DDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		253C5532217FFFC200BC3DDB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				253C5533217FFFC200BC3DDB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		253C5538217FFFC200BC3DDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		253C5539217FFFC200BC3DDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		253C553B217FFFC200BC3DDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14575877C4509DB436210A58 /* Pods-CherryGrow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMG2XMRG2Y;
+				GCC_PREFIX_HEADER = "CherryGrow/公用/SupportFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = CherryGrow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yinq.CherryGrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		253C553C217FFFC200BC3DDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6773EEE0CB4F709782235FA8 /* Pods-CherryGrow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMG2XMRG2Y;
+				GCC_PREFIX_HEADER = "CherryGrow/公用/SupportFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = CherryGrow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yinq.CherryGrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		253C551F217FFFC200BC3DDB /* Build configuration list for PBXProject "CherryGrow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				253C5538217FFFC200BC3DDB /* Debug */,
+				253C5539217FFFC200BC3DDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		253C553A217FFFC200BC3DDB /* Build configuration list for PBXNativeTarget "CherryGrow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				253C553B217FFFC200BC3DDB /* Debug */,
+				253C553C217FFFC200BC3DDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 253C551C217FFFC200BC3DDB /* Project object */;
+}
