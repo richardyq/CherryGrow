@@ -8,10 +8,12 @@
 
 #import "UserDefaults.h"
 #import "UserAccountModel.h"
+#import "UserModel.h"
 
 static UserDefaults* shareInstance = nil;
 
 static NSString* loginedUserAccountKey = @"loginedUserAccount";
+static NSString* loginedUserKey = @"loginedUser";
 
 @interface UserDefaults ()
 
@@ -59,5 +61,35 @@ static NSString* loginedUserAccountKey = @"loginedUserAccount";
     }
     
     [self.userdefaults synchronize];
+}
+
+- (UserModel*) loginedUserModel{
+    NSDictionary* userDictionary = [self.userdefaults valueForKey:loginedUserKey];
+    if (userDictionary) {
+        UserModel* user = [UserModel mj_objectWithKeyValues:userDictionary];
+        return user;
+    }
+    return nil;
+}
+
+- (void) setLoginedUserModel:(UserModel *)loginedUserModel{
+    if (!loginedUserModel) {
+        [self.userdefaults removeObjectForKey:loginedUserKey];
+    }
+    else{
+        NSDictionary* userDictionary = [loginedUserModel mj_keyValues];
+        [self.userdefaults setValue:userDictionary forKey:loginedUserKey];
+    }
+    
+    [self.userdefaults synchronize];
+}
+
+- (NSInteger) loginedUserId{
+    UserModel* loginedUser = self.loginedUserModel;
+    NSInteger loginedUserId = 0;
+    if (loginedUser) {
+        loginedUserId = loginedUser.userId;
+    }
+    return loginedUserId;
 }
 @end

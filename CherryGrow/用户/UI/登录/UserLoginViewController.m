@@ -7,7 +7,12 @@
 //
 
 #import "UserLoginViewController.h"
+#import "UserUtil.h"
+
 #import "UserAccountModel.h"
+#import "UserModel.h"
+
+#import "InitializationUtil.h"
 
 @interface UserLoginViewController ()
 
@@ -160,8 +165,16 @@
         return;
     }
     
-//    [self saveLoginedUserAccount];
-    //进入主界面
+   
+    
+    UserModel* user = [UserUtil getUserModelWithAccount:self.accountString];
+    if (!user) {
+        [NSObject showAlert:@"用户不存在。"];
+        return;
+    }
+    [self saveLoginedUserAccount];
+    [[InitializationUtil new] startInitialize];
+    
 }
 
 - (void) saveLoginedUserAccount{

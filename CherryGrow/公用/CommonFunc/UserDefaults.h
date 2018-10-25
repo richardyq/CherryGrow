@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class UserAccountModel;
+@class UserModel;
 
 @interface UserDefaults : NSObject
 
@@ -19,5 +20,13 @@
  已经登录的用户账号
  */
 @property (nonatomic, strong) UserAccountModel* loginedUserAccount;
+
+/*
+ loginedUserModel
+ 当前登录的用户信息
+ */
+@property (nonatomic, strong) UserModel* loginedUserModel;
+
+@property (nonatomic, readonly) NSInteger loginedUserId;
 
 @end

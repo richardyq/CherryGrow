@@ -14,4 +14,5 @@
 
 - (void) entryUserLoginPage;
 
+- (void) entryMainStartPage;
 @end

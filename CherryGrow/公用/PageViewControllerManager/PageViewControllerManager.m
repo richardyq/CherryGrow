@@ -8,6 +8,7 @@
 
 #import "PageViewControllerManager.h"
 #import "UserLoginViewController.h"
+#import "MainStartViewController.h"
 
 static PageViewControllerManager* defaultManager = nil;
 
@@ -24,5 +25,10 @@ static PageViewControllerManager* defaultManager = nil;
     UserLoginViewController* loginController = [[UserLoginViewController alloc] initWithNibName:nil bundle:nil];
     
     [[NSObject rootWindow] setRootViewController:loginController];
+}
+
+- (void) entryMainStartPage{
+    MainStartViewController* startController = [[MainStartViewController alloc] initWithNibName:nil bundle:nil];
+    [[NSObject rootWindow] setRootViewController:startController];
 }
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserModel.h"
 
 @interface UserUtil : NSObject
 
++ (UserModel*) getUserModelWithAccount:(NSString*) account;
 @end
