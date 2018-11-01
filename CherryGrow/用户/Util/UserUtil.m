@@ -9,6 +9,7 @@
 #import "UserUtil.h"
 #import "UserRequestUtil.h"
 #import "UserAccountModel.h"
+#import "UserModel.h"
 
 @implementation UserUtil
 
@@ -47,7 +48,29 @@
         
     } failed:^(NSInteger errorCode, NSString *message) {
         [NSObject showAlert:message];
-       
+        if (fail) {
+            fail(errorCode, message);
+        }
+    } complete:^(NSInteger errorCode) {
+        
+    }];
+}
+
++ (void) startGetUserInfo:(NSString*) userId
+                  success:(CherrySuccessHandler) success
+                   failed:(CherryFailedHandler) fail{
+    __block UserModel* userInfo = nil;
+    [UserRequestUtil createGetUserInfoRequest:userId success:^(id result) {
+        userInfo = (UserModel*) result;
+        
+        if(success){
+            success(userInfo);
+        }
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+        if (fail) {
+            fail(errorCode, message);
+        }
     } complete:^(NSInteger errorCode) {
         
     }];

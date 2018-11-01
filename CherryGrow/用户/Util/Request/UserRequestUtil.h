@@ -16,5 +16,9 @@
                     failed:(CDRequestFailed) failedHandler
                   complete:(CDRequestComplete) completeHandler;
 
++ (void) createGetUserInfoRequest:(NSString*) userId
+                          success:(CDRequestSuccess) successHandler
+                           failed:(CDRequestFailed) failedHandler
+                         complete:(CDRequestComplete) completeHandler;
 
 @end

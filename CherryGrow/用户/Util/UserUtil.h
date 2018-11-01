@@ -17,4 +17,8 @@
            password:(NSString*) password
             success:(CherrySuccessHandler) success
              failed:(CherryFailedHandler) fail;
+
++ (void) startGetUserInfo:(NSString*) userId
+                  success:(CherrySuccessHandler) success
+                   failed:(CherryFailedHandler) fail;
 @end

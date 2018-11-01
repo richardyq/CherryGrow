@@ -16,7 +16,9 @@
 #import "UserUtil.h"
 
 @interface UserLoginViewController ()
-
+{
+    InitializationUtil* util;
+}
 @property (nonatomic, strong) UIImageView* logoImageView;
 
 @property (nonatomic, strong) UITextField* accountTextField;
@@ -50,6 +52,8 @@
     }
     
     [self layoutElements];
+    
+    util = [InitializationUtil new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -174,6 +178,7 @@
     [UserUtil startLogin:self.accountString password:self.passwordString success:^(id result) {
         UserAccountModel* accountModel = (UserAccountModel*) result;
         
+        [util startLoadUserInfo:accountModel.userId];
     } failed:^(NSInteger errCode, NSString *errMsg) {
         
     }];

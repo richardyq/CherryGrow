@@ -12,4 +12,5 @@
 
 - (void) startInitialize;
 
+- (void) startLoadUserInfo:(NSString*) userId;
 @end

@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, EUserGender) {
 
 @interface UserModel : NSObject
 
-@property (nonatomic, assign) NSInteger userId;
+@property (nonatomic, strong) NSString* userId;
 @property (nonatomic, strong) NSString* account;
 @property (nonatomic, strong) NSString* userName;
 @property (nonatomic, strong) NSString* mobile;
