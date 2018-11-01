@@ -12,4 +12,9 @@
 @interface UserUtil : NSObject
 
 + (UserModel*) getUserModelWithAccount:(NSString*) account;
+
++ (void) startLogin:(NSString*) account
+           password:(NSString*) password
+            success:(CherrySuccessHandler) success
+             failed:(CherryFailedHandler) fail;
 @end

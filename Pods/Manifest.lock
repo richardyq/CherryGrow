@@ -1,4 +1,21 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - CherryRequest (0.1.1):
+    - AFNetworking
   - Masonry (1.1.0)
   - MJExtension (3.0.15)
   - YYKit (1.0.9):
@@ -6,15 +23,27 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - CherryRequest (from `https://github.com/richardyq/CherryRequest.git`)
   - Masonry
   - MJExtension
   - YYKit (~> 1.0.9)
 
+EXTERNAL SOURCES:
+  CherryRequest:
+    :git: https://github.com/richardyq/CherryRequest.git
+
+CHECKOUT OPTIONS:
+  CherryRequest:
+    :commit: 3362f1efc9bd775ba507cb3cf18dee7dc15f8c88
+    :git: https://github.com/richardyq/CherryRequest.git
+
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CherryRequest: c72257e0041ac688fa28814dcab5244f9992396f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 3f039575db1b135a20699ad298713b26acec1528
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 3f48f76ddb64b7efaa76d63000141240a0d00d14
+PODFILE CHECKSUM: 97be8cf737b53d3187fd08c71bb01cdc3ae80685
 
 COCOAPODS: 1.4.0

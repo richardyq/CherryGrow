@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSString* account;
 @property (nonatomic, strong) NSString* password;
+@property (nonatomic, strong) NSString* userId;
+@property (nonatomic, strong) NSString* lastLoginDateTime;
 
 - (id) initWithAccount:(NSString*) account password:(NSString*) password;
 @end

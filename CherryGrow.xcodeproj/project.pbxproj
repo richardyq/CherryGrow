@@ -27,6 +27,8 @@
 		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
 		2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C42182A92500E94CA7 /* MealSituationEditView.m */; };
 		2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */; };
+		25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B8023F218AFBD200B13113 /* UserLoginRequest.m */; };
+		25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80242218AFC9F00B13113 /* UserRequestUtil.m */; };
 		25F7CFC421817733001C19A3 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F7CFC321817733001C19A3 /* UserList.plist */; };
 		25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCB21819895001C19A3 /* MainStartViewController.m */; };
 		25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */; };
@@ -84,6 +86,10 @@
 		2553F5C42182A92500E94CA7 /* MealSituationEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationEditView.m; sourceTree = "<group>"; };
 		2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSitatusEditTableViewCell.h; sourceTree = "<group>"; };
 		2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSitatusEditTableViewCell.m; sourceTree = "<group>"; };
+		25B8023E218AFBD200B13113 /* UserLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLoginRequest.h; sourceTree = "<group>"; };
+		25B8023F218AFBD200B13113 /* UserLoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginRequest.m; sourceTree = "<group>"; };
+		25B80241218AFC9F00B13113 /* UserRequestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequestUtil.h; sourceTree = "<group>"; };
+		25B80242218AFC9F00B13113 /* UserRequestUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRequestUtil.m; sourceTree = "<group>"; };
 		25F7CFC321817733001C19A3 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
 		25F7CFCA21819895001C19A3 /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
 		25F7CFCB21819895001C19A3 /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
@@ -250,6 +256,7 @@
 		253C55532180064C00BC3DDB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				25B8023D218AFB8700B13113 /* Request */,
 				253C55582180070C00BC3DDB /* UserUtil.h */,
 				253C55592180070C00BC3DDB /* UserUtil.m */,
 			);
@@ -302,6 +309,17 @@
 				253C55722180128000BC3DDB /* UserLoginViewController.m */,
 			);
 			path = "登录";
+			sourceTree = "<group>";
+		};
+		25B8023D218AFB8700B13113 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				25B8023E218AFBD200B13113 /* UserLoginRequest.h */,
+				25B8023F218AFBD200B13113 /* UserLoginRequest.m */,
+				25B80241218AFC9F00B13113 /* UserRequestUtil.h */,
+				25B80242218AFC9F00B13113 /* UserRequestUtil.m */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		25F7CFC52181985D001C19A3 /* 主界面 */ = {
@@ -565,6 +583,8 @@
 				25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */,
 				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
 				25F7CFEF2181BE3B001C19A3 /* RadioButton.m in Sources */,
+				25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */,
+				25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */,
 				253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */,
 				25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */,
 				253C55502180039F00BC3DDB /* InitializationUtil.m in Sources */,

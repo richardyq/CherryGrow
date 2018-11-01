@@ -13,6 +13,7 @@
 #import "UserModel.h"
 
 #import "InitializationUtil.h"
+#import "UserUtil.h"
 
 @interface UserLoginViewController ()
 
@@ -42,6 +43,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor commonBackgroundColor]];
+    UserAccountModel* account = [[UserDefaults shareInstance] loginedUserAccount];
+    if (account) {
+        self.accountTextField.text = account.account;
+        self.passwordTextField.text = account.password;
+    }
     
     [self layoutElements];
 }
@@ -165,8 +171,14 @@
         return;
     }
     
-   
-    
+    [UserUtil startLogin:self.accountString password:self.passwordString success:^(id result) {
+        UserAccountModel* accountModel = (UserAccountModel*) result;
+        
+    } failed:^(NSInteger errCode, NSString *errMsg) {
+        
+    }];
+    return;
+    /*
     UserModel* user = [UserUtil getUserModelWithAccount:self.accountString];
     if (!user) {
         [NSObject showAlert:@"用户不存在。"];
@@ -174,7 +186,7 @@
     }
     [self saveLoginedUserAccount];
     [[InitializationUtil new] startInitialize];
-    
+    */
 }
 
 - (void) saveLoginedUserAccount{

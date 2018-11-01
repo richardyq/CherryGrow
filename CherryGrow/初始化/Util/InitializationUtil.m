@@ -20,8 +20,8 @@
 - (void) startInitialize{
     //获取已经登录的账户信息
     UserAccountModel* loginedAccount = [[UserDefaults shareInstance] loginedUserAccount];
-
-    if (!loginedAccount) {
+    if (YES) {
+//    if (!loginedAccount) {
         //用户还没登录，进入登录界面，进行登录
         [[PageViewControllerManager defaultManager] entryUserLoginPage];
         return;

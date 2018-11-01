@@ -21,4 +21,8 @@
 
 #import "PageViewControllerManager.h"
 
+
+typedef void(^CherrySuccessHandler)(id result);
+typedef void(^CherryFailedHandler)(NSInteger errCode, NSString* errMsg);
+
 #endif /* CGCommonInc_h */

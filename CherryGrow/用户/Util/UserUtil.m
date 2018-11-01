@@ -7,6 +7,8 @@
 //
 
 #import "UserUtil.h"
+#import "UserRequestUtil.h"
+#import "UserAccountModel.h"
 
 @implementation UserUtil
 
@@ -26,5 +28,28 @@
     }];
     
     return foundUser;
+}
+
++ (void) startLogin:(NSString*) account
+           password:(NSString*) password
+            success:(CherrySuccessHandler) success
+             failed:(CherryFailedHandler) fail{
+    
+    __block UserAccountModel* userAccount = nil;
+    [UserRequestUtil createLoginRequst:account password:password success:^(id result) {
+        //登录接口调用成功
+        
+        userAccount = (UserAccountModel*) result;
+        [[UserDefaults shareInstance] setLoginedUserAccount:userAccount];
+        if(success){
+            success(userAccount);
+        }
+        
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+       
+    } complete:^(NSInteger errorCode) {
+        
+    }];
 }
 @end

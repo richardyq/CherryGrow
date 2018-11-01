@@ -12,7 +12,7 @@
 #import "MJExtension.h"
 #import "YYKit.h"
 #import "Masonry.h"
-
+#import "CDRequestManager.h"
 
 #import "CGCommonInc.h"
 
