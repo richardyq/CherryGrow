@@ -25,6 +25,8 @@
 		253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556B218010B900BC3DDB /* UIView+BoarderExt.m */; };
 		253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556E218011B000BC3DDB /* UIColor+StandardExt.m */; };
 		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
+		2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C42182A92500E94CA7 /* MealSituationEditView.m */; };
+		2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */; };
 		25F7CFC421817733001C19A3 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F7CFC321817733001C19A3 /* UserList.plist */; };
 		25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCB21819895001C19A3 /* MainStartViewController.m */; };
 		25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */; };
@@ -35,6 +37,8 @@
 		25F7CFE52181AF1B001C19A3 /* SleepSituationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFE42181AF1B001C19A3 /* SleepSituationStartViewController.m */; };
 		25F7CFE82181AF3C001C19A3 /* StudySituationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFE72181AF3C001C19A3 /* StudySituationStartViewController.m */; };
 		25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFEA2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m */; };
+		25F7CFEF2181BE3B001C19A3 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFEE2181BE3B001C19A3 /* RadioButton.m */; };
+		25F7CFF22181BFEB001C19A3 /* RadioGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFF12181BFEB001C19A3 /* RadioGroup.m */; };
 		25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */; };
 		25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35A21802025006C8588 /* NSObject+AlertExt.m */; };
 		25FAA35E2180248E006C8588 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAA35D2180248E006C8588 /* UserModel.m */; };
@@ -76,6 +80,10 @@
 		253C556E218011B000BC3DDB /* UIColor+StandardExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StandardExt.m"; sourceTree = "<group>"; };
 		253C55712180128000BC3DDB /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
 		253C55722180128000BC3DDB /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		2553F5C32182A92500E94CA7 /* MealSituationEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituationEditView.h; sourceTree = "<group>"; };
+		2553F5C42182A92500E94CA7 /* MealSituationEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationEditView.m; sourceTree = "<group>"; };
+		2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSitatusEditTableViewCell.h; sourceTree = "<group>"; };
+		2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSitatusEditTableViewCell.m; sourceTree = "<group>"; };
 		25F7CFC321817733001C19A3 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
 		25F7CFCA21819895001C19A3 /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
 		25F7CFCB21819895001C19A3 /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 		25F7CFE72181AF3C001C19A3 /* StudySituationStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudySituationStartViewController.m; sourceTree = "<group>"; };
 		25F7CFE92181AF66001C19A3 /* GeneralSituationStartCommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralSituationStartCommonViewController.h; sourceTree = "<group>"; };
 		25F7CFEA2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralSituationStartCommonViewController.m; sourceTree = "<group>"; };
+		25F7CFED2181BE3B001C19A3 /* RadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
+		25F7CFEE2181BE3B001C19A3 /* RadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		25F7CFF02181BFEB001C19A3 /* RadioGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioGroup.h; sourceTree = "<group>"; };
+		25F7CFF12181BFEB001C19A3 /* RadioGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioGroup.m; sourceTree = "<group>"; };
 		25FAA35621801D48006C8588 /* UIImage+ShapeExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ShapeExt.h"; sourceTree = "<group>"; };
 		25FAA35721801D48006C8588 /* UIImage+ShapeExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ShapeExt.m"; sourceTree = "<group>"; };
 		25FAA35921802025006C8588 /* NSObject+AlertExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AlertExt.h"; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 		253C553F2180012C00BC3DDB /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
+				25F7CFEC2181BE24001C19A3 /* Radio */,
 				25F7CFD52181AD6B001C19A3 /* TagView */,
 				253C55632180102E00BC3DDB /* CommonView */,
 				253C555B218008D500BC3DDB /* CommonFunc */,
@@ -345,6 +358,10 @@
 			children = (
 				25F7CFDD2181AEAD001C19A3 /* MealSituationStartViewController.h */,
 				25F7CFDE2181AEAD001C19A3 /* MealSituationStartViewController.m */,
+				2553F5C32182A92500E94CA7 /* MealSituationEditView.h */,
+				2553F5C42182A92500E94CA7 /* MealSituationEditView.m */,
+				2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */,
+				2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */,
 			);
 			path = "吃饭情况";
 			sourceTree = "<group>";
@@ -374,6 +391,17 @@
 				25F7CFE72181AF3C001C19A3 /* StudySituationStartViewController.m */,
 			);
 			path = "学习情况";
+			sourceTree = "<group>";
+		};
+		25F7CFEC2181BE24001C19A3 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				25F7CFED2181BE3B001C19A3 /* RadioButton.h */,
+				25F7CFEE2181BE3B001C19A3 /* RadioButton.m */,
+				25F7CFF02181BFEB001C19A3 /* RadioGroup.h */,
+				25F7CFF12181BFEB001C19A3 /* RadioGroup.m */,
+			);
+			path = Radio;
 			sourceTree = "<group>";
 		};
 		2C9E453952D9974427A2D01A /* Frameworks */ = {
@@ -520,19 +548,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				253C5549218002BB00BC3DDB /* PageViewControllerManager.m in Sources */,
+				2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */,
 				253C555E218008DF00BC3DDB /* UserDefaults.m in Sources */,
 				253C55572180066F00BC3DDB /* UserAccountModel.m in Sources */,
 				253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */,
 				25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */,
 				253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */,
 				25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */,
+				2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */,
 				25FAA35E2180248E006C8588 /* UserModel.m in Sources */,
 				25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */,
 				253C555A2180070C00BC3DDB /* UserUtil.m in Sources */,
 				253C5537217FFFC200BC3DDB /* main.m in Sources */,
+				25F7CFF22181BFEB001C19A3 /* RadioGroup.m in Sources */,
 				25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */,
 				25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */,
 				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
+				25F7CFEF2181BE3B001C19A3 /* RadioButton.m in Sources */,
 				253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */,
 				25FAA35B21802025006C8588 /* NSObject+AlertExt.m in Sources */,
 				253C55502180039F00BC3DDB /* InitializationUtil.m in Sources */,
