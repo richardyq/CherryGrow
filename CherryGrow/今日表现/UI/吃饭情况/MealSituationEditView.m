@@ -9,6 +9,7 @@
 #import "MealSituationEditView.h"
 #import "RadioGroup.h"
 
+
 @interface MealSituationEditView ()
 
 @property (nonatomic, strong) UILabel* titleLabel;
@@ -19,10 +20,14 @@
 @property (nonatomic, strong) UILabel* speedLabel;
 @property (nonatomic, strong) RadioGroup* speedRadioGroup;
 
-@property (nonatomic, strong) UILabel* pickyLabel;
-@property (nonatomic, strong) RadioGroup* pickyRadioGroup;
+@property (nonatomic, strong) UILabel* amountLabel;
+@property (nonatomic, strong) RadioGroup* amountRadioGroup;
 
 @property (nonatomic, strong) UIButton* submitButton;
+@property (nonatomic, strong) UILabel* scoreLabel;
+
+
+
 
 @end
 
@@ -71,27 +76,46 @@
         make.centerY.equalTo(self.speedLabel);
     }];
     
-    [self.pickyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.amountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.speedLabel);
         make.top.equalTo(self.speedRadioGroup.mas_bottom).offset(15);
     }];
     
-    [self.pickyRadioGroup mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.pickyLabel.mas_right).offset(10);
+    [self.amountRadioGroup mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.amountLabel.mas_right).offset(10);
         make.right.equalTo(self).offset(-10);
         make.height.mas_equalTo(30);
-        make.centerY.equalTo(self.pickyLabel);
+        make.centerY.equalTo(self.amountLabel);
 //        make.bottom.equalTo(self).offset(-12);
     }];
     
     [self.submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(150, 35));
-        make.top.equalTo(self.pickyRadioGroup.mas_bottom).offset(7);
+        make.top.equalTo(self.amountRadioGroup.mas_bottom).offset(7);
         make.centerX.equalTo(self);
+        make.bottom.equalTo(self).offset(-12);
+    }];
+    
+    [self.scoreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.top.equalTo(self.amountRadioGroup.mas_bottom).offset(7);
         make.bottom.equalTo(self).offset(-12);
     }];
 }
 
+- (void) setMealSituation:(MealSituation*) situation{
+    self.submitButton.hidden = YES;
+    self.scoreLabel.hidden = NO;
+    
+    [self.askHelpRadioGroup setSelectedIndex:situation.feed];
+    self.askHelpRadioGroup.editable = NO;
+    [self.speedRadioGroup setSelectedIndex:situation.speed];
+    self.speedRadioGroup.editable = NO;
+    [self.amountRadioGroup setSelectedIndex:situation.amount];
+    self.amountRadioGroup.editable = NO;
+    
+    self.scoreLabel.text = [NSString stringWithFormat:@"得分: %.1f", situation.score];
+}
 #pragma mark - settingAndGetting
 - (UILabel*) titleLabel{
     if (!_titleLabel) {
@@ -138,22 +162,22 @@
     return _speedRadioGroup;
 }
 
-- (UILabel*) pickyLabel{
-    if (!_pickyLabel) {
-        _pickyLabel = [self addLabel];
-        _pickyLabel.font = [UIFont systemFontOfSize:13];
-        _pickyLabel.textColor = [UIColor commonTextColor];
-        _pickyLabel.text = @"是否挑食：";
+- (UILabel*) amountLabel{
+    if (!_amountLabel) {
+        _amountLabel = [self addLabel];
+        _amountLabel.font = [UIFont systemFontOfSize:13];
+        _amountLabel.textColor = [UIColor commonTextColor];
+        _amountLabel.text = @"饭量：";
     }
-    return _pickyLabel;
+    return _amountLabel;
 }
 
-- (RadioGroup*) pickyRadioGroup{
-    if (!_pickyRadioGroup) {
-        _pickyRadioGroup = [[RadioGroup alloc] initWithTitles:@[@"挑食", @"不挑食"]  orientation:Radio_Horizontal];
-        [self addSubview:_pickyRadioGroup];
+- (RadioGroup*) amountRadioGroup{
+    if (!_amountRadioGroup) {
+        _amountRadioGroup = [[RadioGroup alloc] initWithTitles:@[@"很少", @"较少", @"合适"]  orientation:Radio_Horizontal];
+        [self addSubview:_amountRadioGroup];
     }
-    return _pickyRadioGroup;
+    return _amountRadioGroup;
 }
 
 - (UIButton*) submitButton{
@@ -166,8 +190,32 @@
         [_submitButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
         [_submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_submitButton setCornerRadius:4.5];
+        
+        [_submitButton addTarget:self action:@selector(submitButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _submitButton;
 }
 
+- (UILabel*) scoreLabel{
+    if (!_scoreLabel) {
+        _scoreLabel = [self addLabel];
+        _scoreLabel.font = [UIFont systemFontOfSize:14];
+        _scoreLabel.textColor = [UIColor commonTextColor];
+    }
+    return _scoreLabel;
+}
+
+#pragma mark - button events
+- (void) submitButtonClicked:(id) sender{
+    MealSituation* situation = [MealSituation new];
+    situation.speed = self.speedRadioGroup.selectedIndex;
+    situation.feed = self.askHelpRadioGroup.selectedIndex;
+    situation.amount = self.amountRadioGroup.selectedIndex;
+    situation.mealCode = self.mealCode;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(submitMealSituation:)])
+    {
+        [self.delegate submitMealSituation:situation];
+    }
+}
 @end

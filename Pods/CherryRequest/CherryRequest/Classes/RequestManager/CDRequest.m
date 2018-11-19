@@ -75,6 +75,7 @@ static NSString* const kRequestParamKey    = @"RequestParam";
 
 - (void) requestComplete{
     CDRequestManager* manager = [CDRequestManager shareInstance];
-    [manager requestComplete:self];
+    [manager performSelectorOnMainThread:@selector(requestComplete:) withObject:self waitUntilDone:YES];
+//    [manager requestComplete:self];
 }
 @end

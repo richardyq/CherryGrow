@@ -16,6 +16,32 @@
 
 @end
 
+@interface MealSituation (TableCell)
+- (NSString*) mealTitle;
+@end
+
+@implementation MealSituation (TableCell)
+
+- (NSString*) mealTitle{
+    NSString* mealTitle = @"早餐";
+    
+    switch (self.mealCode) {
+        case 0:
+            mealTitle = @"早餐";
+            break;
+        case 1:
+            mealTitle = @"午餐";
+            break;
+        case 2:
+            mealTitle = @"晚餐";
+            break;
+        default:
+            break;
+    }
+    return mealTitle;
+}
+@end
+
 @implementation MealSitatusEditTableViewCell
 
 - (void)awakeFromNib {
@@ -39,6 +65,21 @@
     return self;
 }
 
+- (id) initWithMealSituation:(MealSituation*) situation{
+    self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MealSitatusEditTableViewCell"];
+    if (self) {
+        _title = [situation mealTitle];
+        [self layoutElements];
+        [self.contentView setBackgroundColor:[UIColor commonBackgroundColor]];
+        
+        [self.editView setMealSituation:situation];
+        [self setMealCode:situation.mealCode];
+        
+        [self.editView setDelegate:self.delegate];
+    }
+    return self;
+}
+
 - (void) layoutElements{
     [self.editView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 12.5, 10, 12.5));
@@ -52,6 +93,16 @@
         [self.contentView addSubview:_editView];
     }
     return _editView;
+}
+
+- (void) setMealCode:(NSInteger)mealCode{
+    _mealCode = mealCode;
+    [self.editView setMealCode:mealCode];
+}
+
+- (void) setDelegate:(id<MealSituationEditDelegate>)delegate{
+    _delegate = delegate;
+    [self.editView setDelegate:delegate];
 }
 
 @end

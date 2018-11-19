@@ -10,11 +10,14 @@
 
 #import "MealSituationEditView.h"
 #import "MealSitatusEditTableViewCell.h"
+#import "SituationRequestManager.h"
+#import "MealSituation.h"
 
 @interface MealSituationStartViewController ()
-<UITableViewDelegate, UITableViewDataSource>
+<UITableViewDelegate, UITableViewDataSource, MealSituationEditDelegate>
 @property (nonatomic, strong) UIView* totalScoreView;
 @property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) NSMutableArray<MealSituation*>* mealSituations;
 
 /*
 @property (nonatomic, strong) MealSituationEditView* breakfastSituationView;
@@ -50,6 +53,9 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
     [self.view setBackgroundColor:[UIColor commonBackgroundColor]];
     
     [self layoutElements];
+    
+    
+    [self startLoadTodaySituations];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,27 +73,31 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
         make.left.right.bottom.equalTo(self.view);
         make.top.equalTo(self.totalScoreView.mas_bottom).offset(12);
     }];
-    /*
-    [self.breakfastSituationView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.totalScoreView.mas_bottom).offset(12);
-        make.centerX.equalTo(self.view);
-        make.width.equalTo(self.view).offset(-25);
-    }];
     
-    [self.lunchSituationView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.breakfastSituationView.mas_bottom).offset(12);
-        make.centerX.equalTo(self.view);
-        make.width.equalTo(self.view).offset(-25);
-    }];
-    
-    [self.dinnerSituationView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.lunchSituationView.mas_bottom).offset(12);
-        make.centerX.equalTo(self.view);
-        make.width.equalTo(self.view).offset(-25);
-    }];
-     */
 }
 
+- (void) startLoadTodaySituations{
+    __weak typeof(self) weakSelf = self;
+    [SituationRequestManager createTodayMealSituationRequst:^(id result) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        NSArray<MealSituation*>* mealSituations = result;
+        [strongSelf setMealSituations:[NSMutableArray<MealSituation*> arrayWithArray:mealSituations]];
+    } failed:^(NSInteger errorCode, NSString *message) {
+        
+    } complete:^(NSInteger errorCode) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        if (errorCode == 0) {
+            [strongSelf.tableView reloadData];
+        }
+    }];
+  
+}
 
 #pragma mark - settingAndGetting
 
@@ -131,34 +141,54 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
         default:
             break;
     }
-    MealSitatusEditTableViewCell* cell = [[MealSitatusEditTableViewCell alloc] initWithTitle:title];
+    MealSitatusEditTableViewCell* cell = nil;
+    MealSituation* situation = [self mealSituationOfIndex:indexPath.row];
+    if (situation) {
+        cell = [[MealSitatusEditTableViewCell alloc] initWithMealSituation:situation];
+    }
+    if (!cell) {
+        cell = [[MealSitatusEditTableViewCell alloc] initWithTitle:title];
+    }
+    [cell setDelegate:self];
+    [cell setMealCode:indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
-/*
-- (MealSituationEditView*) breakfastSituationView{
-    if (!_breakfastSituationView) {
-        _breakfastSituationView = [[MealSituationEditView alloc] initWithTitle:@"早餐"];
-        [self.view addSubview:_breakfastSituationView];
-    }
-    return _breakfastSituationView;
+- (MealSituation*) mealSituationOfIndex:(NSInteger) row{
+    __block MealSituation* mealSituation = nil;
+    [self.mealSituations enumerateObjectsUsingBlock:^(MealSituation * _Nonnull situation, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (situation.mealCode == row) {
+            mealSituation = situation;
+            *stop = YES;
+        }
+    }];
+    return mealSituation;
 }
 
-- (MealSituationEditView*) lunchSituationView{
-    if (!_lunchSituationView) {
-        _lunchSituationView = [[MealSituationEditView alloc] initWithTitle:@"午餐"];
-        [self.view addSubview:_lunchSituationView];
-    }
-    return _lunchSituationView;
+#pragma mark - MealSituationEditDelegate
+- (void) submitMealSituation:(MealSituation*) situation{
+    __weak typeof(self) weakSelf = self;
+    [SituationRequestManager createAddMealSituation:situation.mealCode speed:situation.speed feed:situation.feed amount:situation.amount success:^(id result) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+       
+        MealSituation* situation = (MealSituation*) result;
+        [strongSelf.mealSituations addObject:situation];
+    } failed:^(NSInteger errorCode, NSString *message) {
+        
+    } complete:^(NSInteger errorCode) {
+        if (errorCode != 0) {
+            return ;
+        }
+        if (!weakSelf) {
+            return;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.tableView reloadData];
+    }];
 }
 
-- (MealSituationEditView*) dinnerSituationView{
-    if (!_dinnerSituationView) {
-        _dinnerSituationView = [[MealSituationEditView alloc] initWithTitle:@"晚餐"];
-        [self.view addSubview:_dinnerSituationView];
-    }
-    return _dinnerSituationView;
-}
- */
 @end

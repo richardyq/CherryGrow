@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C52B1930FDB9738DD3480FE /* libPods-CherryGrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF96083E32B222C796C74C1 /* libPods-CherryGrow.a */; };
+		250E453F21A2625500BEEC58 /* MealSituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 250E453E21A2625500BEEC58 /* MealSituation.m */; };
+		250E454321A262FD00BEEC58 /* TodayMealSituationListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 250E454221A262FD00BEEC58 /* TodayMealSituationListRequest.m */; };
+		250E454721A2649600BEEC58 /* MealSituationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 250E454621A2649600BEEC58 /* MealSituationUtil.m */; };
+		250E454A21A2652000BEEC58 /* SituationRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250E454921A2652000BEEC58 /* SituationRequestManager.m */; };
+		250E454D21A286A100BEEC58 /* AddMealSituationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 250E454C21A286A100BEEC58 /* AddMealSituationRequest.m */; };
 		253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C5528217FFFC200BC3DDB /* AppDelegate.m */; };
 		253C552F217FFFC200BC3DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253C552D217FFFC200BC3DDB /* Main.storyboard */; };
 		253C5531217FFFC200BC3DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253C5530217FFFC200BC3DDB /* Assets.xcassets */; };
@@ -50,6 +55,17 @@
 
 /* Begin PBXFileReference section */
 		14575877C4509DB436210A58 /* Pods-CherryGrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrow/Pods-CherryGrow.debug.xcconfig"; sourceTree = "<group>"; };
+		250E453D21A2625500BEEC58 /* MealSituation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituation.h; sourceTree = "<group>"; };
+		250E453E21A2625500BEEC58 /* MealSituation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituation.m; sourceTree = "<group>"; };
+		250E454121A262FD00BEEC58 /* TodayMealSituationListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayMealSituationListRequest.h; sourceTree = "<group>"; };
+		250E454221A262FD00BEEC58 /* TodayMealSituationListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayMealSituationListRequest.m; sourceTree = "<group>"; };
+		250E454521A2649600BEEC58 /* MealSituationUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituationUtil.h; sourceTree = "<group>"; };
+		250E454621A2649600BEEC58 /* MealSituationUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationUtil.m; sourceTree = "<group>"; };
+		250E454821A2652000BEEC58 /* SituationRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SituationRequestManager.h; sourceTree = "<group>"; };
+		250E454921A2652000BEEC58 /* SituationRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SituationRequestManager.m; sourceTree = "<group>"; };
+		250E454B21A286A100BEEC58 /* AddMealSituationRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMealSituationRequest.h; sourceTree = "<group>"; };
+		250E454C21A286A100BEEC58 /* AddMealSituationRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMealSituationRequest.m; sourceTree = "<group>"; };
+		250E454E21A2A9B800BEEC58 /* MealSituationEditDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituationEditDelegate.h; sourceTree = "<group>"; };
 		253C5524217FFFC200BC3DDB /* CherryGrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CherryGrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253C5527217FFFC200BC3DDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		253C5528217FFFC200BC3DDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,6 +157,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250E453C21A2623F00BEEC58 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				250E453D21A2625500BEEC58 /* MealSituation.h */,
+				250E453E21A2625500BEEC58 /* MealSituation.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		250E454021A262E100BEEC58 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				250E454121A262FD00BEEC58 /* TodayMealSituationListRequest.h */,
+				250E454221A262FD00BEEC58 /* TodayMealSituationListRequest.m */,
+				250E454B21A286A100BEEC58 /* AddMealSituationRequest.h */,
+				250E454C21A286A100BEEC58 /* AddMealSituationRequest.m */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		250E454421A2648700BEEC58 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				250E454521A2649600BEEC58 /* MealSituationUtil.h */,
+				250E454621A2649600BEEC58 /* MealSituationUtil.m */,
+				250E454821A2652000BEEC58 /* SituationRequestManager.h */,
+				250E454921A2652000BEEC58 /* SituationRequestManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		253C551B217FFFC200BC3DDB = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +399,9 @@
 		25F7CFD02181AB09001C19A3 /* 今日表现 */ = {
 			isa = PBXGroup;
 			children = (
+				250E454421A2648700BEEC58 /* Utils */,
+				250E454021A262E100BEEC58 /* Requests */,
+				250E453C21A2623F00BEEC58 /* DataModel */,
 				25F7CFD12181AB14001C19A3 /* UI */,
 			);
 			path = "今日表现";
@@ -390,6 +440,7 @@
 				2553F5C42182A92500E94CA7 /* MealSituationEditView.m */,
 				2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */,
 				2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */,
+				250E454E21A2A9B800BEEC58 /* MealSituationEditDelegate.h */,
 			);
 			path = "吃饭情况";
 			sourceTree = "<group>";
@@ -585,13 +636,16 @@
 				25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */,
 				2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */,
 				25FAA35E2180248E006C8588 /* UserModel.m in Sources */,
+				250E454721A2649600BEEC58 /* MealSituationUtil.m in Sources */,
 				25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */,
 				253C555A2180070C00BC3DDB /* UserUtil.m in Sources */,
 				25B80246218B3EE500B13113 /* UserInfoRequest.m in Sources */,
+				250E454A21A2652000BEEC58 /* SituationRequestManager.m in Sources */,
 				253C5537217FFFC200BC3DDB /* main.m in Sources */,
 				25F7CFF22181BFEB001C19A3 /* RadioGroup.m in Sources */,
 				25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */,
 				25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */,
+				250E453F21A2625500BEEC58 /* MealSituation.m in Sources */,
 				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
 				25F7CFEF2181BE3B001C19A3 /* RadioButton.m in Sources */,
 				25B80249218B49B600B13113 /* HttpRequestUrlUtil.m in Sources */,
@@ -603,8 +657,10 @@
 				25F7CFDB2181AD6B001C19A3 /* TagViewController.m in Sources */,
 				253C554C218002E900BC3DDB /* InitializationViewController.m in Sources */,
 				25F7CFE82181AF3C001C19A3 /* StudySituationStartViewController.m in Sources */,
+				250E454D21A286A100BEEC58 /* AddMealSituationRequest.m in Sources */,
 				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
 				253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */,
+				250E454321A262FD00BEEC58 /* TodayMealSituationListRequest.m in Sources */,
 				25F7CFE52181AF1B001C19A3 /* SleepSituationStartViewController.m in Sources */,
 				25F7CFDA2181AD6B001C19A3 /* TagView.m in Sources */,
 				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,

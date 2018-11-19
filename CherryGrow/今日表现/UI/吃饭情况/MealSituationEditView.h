@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MealSituation.h"
+#import "MealSituationEditDelegate.h"
+
 
 @interface MealSituationEditView : UIView
 
+@property (nonatomic, assign) NSInteger mealCode;
+@property (nonatomic, weak) id<MealSituationEditDelegate> delegate;
+
 - (id) initWithTitle:(NSString*) title;
 
+- (void) setMealSituation:(MealSituation*) situation;
 @end

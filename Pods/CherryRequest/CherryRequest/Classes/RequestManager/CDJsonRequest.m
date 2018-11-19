@@ -75,38 +75,43 @@
     NSLog(@"jsonPostSuccess operation %@", task.response.URL.absoluteString);
     if (responseObject )
     {
-        NSString* strResp = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSDictionary* respDictionary = (NSDictionary*)[strResp mj_JSONObject];
-        
-        if(!respDictionary || ![respDictionary isKindOfClass:[NSDictionary class]])
-        {
-            //解析返回数据失败
-            [[CDRequestManager shareInstance] requestFailed:self errroCode:-2 errorMessage:@"解析返回数据失败。"];
-            goto END;
-        }
-        
-        NSNumber* retCode = [respDictionary valueForKey:@"code"];
-        NSString* err_msg = [respDictionary valueForKey:@"message"];
-        id retResult = [respDictionary valueForKey:@"result"];
-        
-        if(!err_msg || ![err_msg isKindOfClass:[NSString class]] || err_msg.length == 0){
-            err_msg = @"解析返回数据失败。";
-        }
-        if(!retCode || ![retCode isKindOfClass:[NSNumber class]] || retCode.integerValue != 0){
-            [[CDRequestManager shareInstance] requestFailed:self errroCode:-2 errorMessage:err_msg];
-            goto END;
-        }
-        
-        if(retResult){
-            id result = [self parserResult:retResult];
-            [[CDRequestManager shareInstance] requestSuccess:self result:result];
-        }
-        
+        [self performSelectorOnMainThread:@selector(handleJsonSuccess:) withObject:responseObject waitUntilDone:YES];
     }
     
 END:
     [self unlock];
 }
+
+- (void) handleJsonSuccess:(id)responseObject{
+    NSString* strResp = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+    NSDictionary* respDictionary = (NSDictionary*)[strResp mj_JSONObject];
+    
+    if(!respDictionary || ![respDictionary isKindOfClass:[NSDictionary class]])
+    {
+        //解析返回数据失败
+        [[CDRequestManager shareInstance] requestFailed:self errroCode:-2 errorMessage:@"解析返回数据失败。"];
+        return;
+    }
+    
+    NSNumber* retCode = [respDictionary valueForKey:@"code"];
+    NSString* err_msg = [respDictionary valueForKey:@"message"];
+    id retResult = [respDictionary valueForKey:@"result"];
+    
+    if(!err_msg || ![err_msg isKindOfClass:[NSString class]] || err_msg.length == 0){
+        err_msg = @"解析返回数据失败。";
+    }
+    if(!retCode || ![retCode isKindOfClass:[NSNumber class]] || retCode.integerValue != 0){
+        [[CDRequestManager shareInstance] requestFailed:self errroCode:-2 errorMessage:err_msg];
+        return;
+    }
+    
+    if(retResult){
+        id result = [self parserResult:retResult];
+        [[CDRequestManager shareInstance] requestSuccess:self result:result];
+    }
+}
+
+
 
 - (id) parserResult:(id) result{
     return result;
@@ -115,8 +120,13 @@ END:
 - (void) jsonPostFailed:(NSURLSessionDataTask *) task Error:(NSError*) error
 {
     NSLog(@"jsonPostFailed called.");
-    [[CDRequestManager shareInstance] requestFailed:self errroCode:-1 errorMessage:@"数据请求失败。"];
+//    [[CDRequestManager shareInstance] requestFailed:self errroCode:-1 errorMessage:@"数据请求失败。"];
+    [self performSelectorOnMainThread:@selector(handlerJsonFail) withObject:nil waitUntilDone:YES];
     [self unlock];
+}
+
+- (void) handlerJsonFail{
+    [[CDRequestManager shareInstance] requestFailed:self errroCode:-1 errorMessage:@"数据请求失败。"];
 }
 
 @end

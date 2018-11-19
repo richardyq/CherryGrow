@@ -25,7 +25,7 @@
     if (self) {
         _orientation = orientation;
         _radioButtons = [self createButtons:titles];
-        
+        _editable = YES;
         [self layoutElements];
     }
     return self;
@@ -97,6 +97,9 @@
 }
 
 - (void) radioButtonClicked:(RadioButton*) radioButton{
+    if (!self.editable) {
+        return;
+    }
     if (![radioButton isKindOfClass:[RadioButton class]]) {
         return;
     }

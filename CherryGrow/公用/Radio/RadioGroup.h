@@ -17,6 +17,7 @@ typedef NS_ENUM(NSUInteger, RadioOrientation) {
 @interface RadioGroup : UIView
 
 @property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, assign) BOOL editable;
 
 - (id) initWithTitles:(NSArray<NSString*>*) titles orientation:(RadioOrientation) orientation;
 @end
