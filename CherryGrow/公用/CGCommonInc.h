@@ -10,6 +10,7 @@
 #define CGCommonInc_h
 
 #import "UserDefaults.h"
+#import "HttpRequestUrlUtil.h"
 
 #import "NSObject+RootControllerExt.h"
 #import "UIView+SubViewExt.h"

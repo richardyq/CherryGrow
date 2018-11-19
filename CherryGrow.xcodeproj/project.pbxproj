@@ -30,6 +30,7 @@
 		25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B8023F218AFBD200B13113 /* UserLoginRequest.m */; };
 		25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80242218AFC9F00B13113 /* UserRequestUtil.m */; };
 		25B80246218B3EE500B13113 /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80245218B3EE500B13113 /* UserInfoRequest.m */; };
+		25B80249218B49B600B13113 /* HttpRequestUrlUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80248218B49B600B13113 /* HttpRequestUrlUtil.m */; };
 		25F7CFC421817733001C19A3 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F7CFC321817733001C19A3 /* UserList.plist */; };
 		25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCB21819895001C19A3 /* MainStartViewController.m */; };
 		25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */; };
@@ -93,6 +94,8 @@
 		25B80242218AFC9F00B13113 /* UserRequestUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRequestUtil.m; sourceTree = "<group>"; };
 		25B80244218B3EE500B13113 /* UserInfoRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoRequest.h; sourceTree = "<group>"; };
 		25B80245218B3EE500B13113 /* UserInfoRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoRequest.m; sourceTree = "<group>"; };
+		25B80247218B49B600B13113 /* HttpRequestUrlUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestUrlUtil.h; sourceTree = "<group>"; };
+		25B80248218B49B600B13113 /* HttpRequestUrlUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequestUrlUtil.m; sourceTree = "<group>"; };
 		25F7CFC321817733001C19A3 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
 		25F7CFCA21819895001C19A3 /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
 		25F7CFCB21819895001C19A3 /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 			children = (
 				253C555C218008DF00BC3DDB /* UserDefaults.h */,
 				253C555D218008DF00BC3DDB /* UserDefaults.m */,
+				25B80247218B49B600B13113 /* HttpRequestUrlUtil.h */,
+				25B80248218B49B600B13113 /* HttpRequestUrlUtil.m */,
 			);
 			path = CommonFunc;
 			sourceTree = "<group>";
@@ -589,6 +594,7 @@
 				25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */,
 				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
 				25F7CFEF2181BE3B001C19A3 /* RadioButton.m in Sources */,
+				25B80249218B49B600B13113 /* HttpRequestUrlUtil.m in Sources */,
 				25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */,
 				25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */,
 				253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */,

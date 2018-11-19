@@ -26,7 +26,7 @@
 }
 
 - (NSString*) postUrl{
-    return @"http://127.0.0.1:8080/ServletExample/CherryTest/CherrySevlet?do=baseInterface&method=getUserInfo&service=userService";
+    return [HttpRequestUrlUtil requestUrl:@"userService" method:@"getUserInfo"];
 }
 
 - (id) parserResult:(id) result{

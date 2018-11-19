@@ -34,7 +34,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CherryRequest:
-    :commit: 3362f1efc9bd775ba507cb3cf18dee7dc15f8c88
+    :commit: 5e2194c23798e710225965b8fc26a463cdea94e4
     :git: https://github.com/richardyq/CherryRequest.git
 
 SPEC CHECKSUMS:
