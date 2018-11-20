@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "SleepSituation.h"
 
+@protocol SleepSituationEditDelegate <NSObject>
+
+@required
+- (void) submitSleepSituation:(SleepSituation*) situation;
+
+@end
+
 @interface SleepSituationEditTableViewCell : UITableViewCell
 
-- (id) initWithSituation:(SleepSituation*) situation;
+@property (nonatomic, weak) id<SleepSituationEditDelegate> delegate;
 
+
+- (id) initWithSituation:(SleepSituation*) situation;
 @end

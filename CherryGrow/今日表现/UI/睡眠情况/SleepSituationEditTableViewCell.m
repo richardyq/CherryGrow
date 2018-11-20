@@ -179,6 +179,9 @@
 
 #pragma mark - button click event
 - (void) submitButtonClicked:(id) sender{
-    
+    self.situation.status = self.sleepTimeGroup.selectedIndex;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(submitSleepSituation:)]) {
+        [self.delegate submitSleepSituation:self.situation];
+    }
 }
 @end

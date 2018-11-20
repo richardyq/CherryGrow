@@ -57,6 +57,7 @@
     SleepSituation* situation = [SleepSituation new];
     situation.date = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     situation.code = code;
+    situation.status = status;
     
     CDJsonRequest* request = [[AddSleepSituationRequest alloc] initWithSleepSituation:situation];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];

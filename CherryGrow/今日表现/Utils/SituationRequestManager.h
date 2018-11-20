@@ -26,5 +26,10 @@
                                   failed:(CDRequestFailed) failedHandler
                                 complete:(CDRequestComplete) completeHandler;
 
++ (void) createAddSleepSituationRequest:(NSInteger) code
+                                 status:(NSInteger) status
+                                success:(CDRequestSuccess) successHandler
+                                 failed:(CDRequestFailed) failedHandler
+                               complete:(CDRequestComplete) completeHandler;
 
 @end
