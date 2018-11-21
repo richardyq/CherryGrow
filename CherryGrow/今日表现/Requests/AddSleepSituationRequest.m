@@ -13,7 +13,7 @@
 
 @synthesize paramDictionary = _paramDictionary;
 
-- (id) initWithSleepSituation:(SleepSituation*) situation{
+- (id) initWithSleepSituation:(SleepSituationParam*) situation{
     self = [super init];
     if(self){
         

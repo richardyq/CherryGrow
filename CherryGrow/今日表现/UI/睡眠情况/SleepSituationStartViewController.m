@@ -138,7 +138,7 @@ SleepSituationEditDelegate>
 }
 
 #pragma mark - SleepSituationEditDelegate
-- (void) submitSleepSituation:(SleepSituation*) situation{
+- (void) submitSleepSituation:(SleepSituationParam*) situation{
     __weak typeof(self) weakSelf = self;
     [SituationRequestManager createAddSleepSituationRequest:situation.code status:situation.status success:^(id result) {
         if (!weakSelf) {

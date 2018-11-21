@@ -12,7 +12,7 @@
 
 @synthesize paramDictionary = _paramDictionary;
 
-- (id) initWithMealSituation:(MealSituation*) situation{
+- (id) initWithMealSituation:(MealSituationParam*) situation{
     self = [super init];
     if(self){
         

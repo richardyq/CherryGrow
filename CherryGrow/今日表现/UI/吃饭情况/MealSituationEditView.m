@@ -25,9 +25,7 @@
 
 @property (nonatomic, strong) UIButton* submitButton;
 @property (nonatomic, strong) UILabel* scoreLabel;
-
-
-
+@property (nonatomic, strong) UILabel* editLabel;
 
 @end
 
@@ -40,6 +38,10 @@
         [self setCornerRadius:5];
         
         self.titleLabel.text = title;
+        
+        self.submitButton.hidden = NO;
+        self.scoreLabel.hidden = YES;
+        self.editLabel.hidden = YES;
         [self layoutElements];
        
     }
@@ -97,15 +99,21 @@
     }];
     
     [self.scoreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self);
-        make.top.equalTo(self.amountRadioGroup.mas_bottom).offset(7);
+        make.right.equalTo(self).offset(-12);
+//        make.top.equalTo(self.amountRadioGroup.mas_bottom).offset(7);
+        make.bottom.equalTo(self.titleLabel);
+    }];
+    
+    [self.editLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self).offset(-12);
+        make.right.equalTo(self).offset(-12);
     }];
 }
 
 - (void) setMealSituation:(MealSituation*) situation{
     self.submitButton.hidden = YES;
     self.scoreLabel.hidden = NO;
+    self.editLabel.hidden = NO;
     
     [self.askHelpRadioGroup setSelectedIndex:situation.feed];
     self.askHelpRadioGroup.editable = NO;
@@ -115,6 +123,8 @@
     self.amountRadioGroup.editable = NO;
     
     self.scoreLabel.text = [NSString stringWithFormat:@"得分: %.1f", situation.score];
+    
+    self.editLabel.text = [NSString stringWithFormat:@"%@ %@", situation.user.userName, situation.updateTime];
 }
 #pragma mark - settingAndGetting
 - (UILabel*) titleLabel{
@@ -205,9 +215,20 @@
     return _scoreLabel;
 }
 
+- (UILabel*) editLabel{
+    if (!_editLabel) {
+        _editLabel = [self addLabel];
+        
+        _editLabel.font = [UIFont systemFontOfSize:12];
+        _editLabel.textColor = [UIColor commonGrayTextColor];
+    }
+    return _editLabel;
+    
+}
+
 #pragma mark - button events
 - (void) submitButtonClicked:(id) sender{
-    MealSituation* situation = [MealSituation new];
+    MealSituationParam* situation = [MealSituationParam new];
     situation.speed = self.speedRadioGroup.selectedIndex;
     situation.feed = self.askHelpRadioGroup.selectedIndex;
     situation.amount = self.amountRadioGroup.selectedIndex;

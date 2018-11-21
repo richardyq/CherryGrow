@@ -12,6 +12,6 @@
 @protocol MealSituationEditDelegate <NSObject>
 
 @required
-- (void) submitMealSituation:(MealSituation*) situation;
+- (void) submitMealSituation:(MealSituationParam*) situation;
 
 @end

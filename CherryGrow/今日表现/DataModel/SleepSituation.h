@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserModel.h"
 
 @interface SleepSituation : NSObject
 
@@ -15,5 +16,19 @@
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, assign) NSInteger status;
 @property (nonatomic, assign) NSInteger score;
+
+@property (nonatomic, strong) UserModel* user;
+@property (nonatomic, strong) NSString* updateTime;
+
+
+@end
+
+@interface SleepSituationParam : NSObject
+
+@property (nonatomic, strong) NSString* date;
+@property (nonatomic, assign) NSInteger code;
+@property (nonatomic, assign) NSInteger status;
+
+@property (nonatomic, strong) NSString* userId;
 
 @end

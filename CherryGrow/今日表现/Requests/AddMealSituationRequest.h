@@ -11,6 +11,6 @@
 
 @interface AddMealSituationRequest : CDJsonRequest
 
-- (id) initWithMealSituation:(MealSituation*) situation;
+- (id) initWithMealSituation:(MealSituationParam*) situation;
 
 @end

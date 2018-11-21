@@ -30,12 +30,13 @@
                          failed:(CDRequestFailed) failedHandler
                        complete:(CDRequestComplete) completeHandler{
     CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
-    MealSituation* situation = [MealSituation new];
+    MealSituationParam* situation = [MealSituationParam new];
     situation.date = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     situation.mealCode = mealCode;
     situation.speed = speed;
     situation.feed = feed;
     situation.amount = amount;
+    situation.userId = [UserDefaults shareInstance].loginedUserId;
     CDJsonRequest* request = [[AddMealSituationRequest alloc] initWithMealSituation:situation];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];
 }
@@ -54,10 +55,11 @@
                                  failed:(CDRequestFailed) failedHandler
                                complete:(CDRequestComplete) completeHandler{
     CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
-    SleepSituation* situation = [SleepSituation new];
+    SleepSituationParam* situation = [SleepSituationParam new];
     situation.date = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     situation.code = code;
     situation.status = status;
+    situation.userId = [UserDefaults shareInstance].loginedUserId;
     
     CDJsonRequest* request = [[AddSleepSituationRequest alloc] initWithSleepSituation:situation];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];

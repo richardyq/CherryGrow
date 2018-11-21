@@ -11,3 +11,7 @@
 @implementation SleepSituation
 
 @end
+
+@implementation SleepSituationParam
+
+@end

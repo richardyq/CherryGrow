@@ -11,6 +11,6 @@
 
 @interface AddSleepSituationRequest : CDJsonRequest
 
-- (id) initWithSleepSituation:(SleepSituation*) situation;
+- (id) initWithSleepSituation:(SleepSituationParam*) situation;
 
 @end

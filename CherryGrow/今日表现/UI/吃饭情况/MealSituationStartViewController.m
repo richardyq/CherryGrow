@@ -167,7 +167,7 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
 }
 
 #pragma mark - MealSituationEditDelegate
-- (void) submitMealSituation:(MealSituation*) situation{
+- (void) submitMealSituation:(MealSituationParam*) situation{
     __weak typeof(self) weakSelf = self;
     [SituationRequestManager createAddMealSituation:situation.mealCode speed:situation.speed feed:situation.feed amount:situation.amount success:^(id result) {
         if (!weakSelf) {

@@ -11,3 +11,7 @@
 @implementation MealSituation
 
 @end
+
+@implementation MealSituationParam
+
+@end

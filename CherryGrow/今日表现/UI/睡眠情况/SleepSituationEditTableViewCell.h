@@ -12,7 +12,7 @@
 @protocol SleepSituationEditDelegate <NSObject>
 
 @required
-- (void) submitSleepSituation:(SleepSituation*) situation;
+- (void) submitSleepSituation:(SleepSituationParam*) situation;
 
 @end
 

@@ -84,9 +84,9 @@ static NSString* loginedUserKey = @"loginedUser";
     [self.userdefaults synchronize];
 }
 
-- (NSInteger) loginedUserId{
+- (NSString*) loginedUserId{
     UserModel* loginedUser = self.loginedUserModel;
-    NSInteger loginedUserId = 0;
+    NSString* loginedUserId = @"0";
     if (loginedUser) {
         loginedUserId = loginedUser.userId;
     }

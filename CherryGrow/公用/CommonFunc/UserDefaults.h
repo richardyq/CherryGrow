@@ -27,6 +27,6 @@
  */
 @property (nonatomic, strong) UserModel* loginedUserModel;
 
-@property (nonatomic, readonly) NSInteger loginedUserId;
+@property (nonatomic, readonly) NSString* loginedUserId;
 
 @end

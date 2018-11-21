@@ -10,6 +10,7 @@
 #import "SleepSituation.h"
 #import "RadioGroup.h"
 
+
 @interface SleepSituation (TableCell)
 
 - (NSString*) title;
@@ -44,6 +45,7 @@
 
 @property (nonatomic, strong) UIButton* submitButton;
 @property (nonatomic, strong) UILabel* scoreLabel;
+@property (nonatomic, strong) UILabel* editLabel;
 @end
 
 @implementation SleepSituationEditTableViewCell
@@ -67,6 +69,7 @@
         [self layoutElements];
         self.submitButton.hidden =(situation.id.length != 0) ;
         self.scoreLabel.hidden = (situation.id.length == 0);
+        self.editLabel.hidden = (situation.id.length == 0);
         
         if (situation.id.length > 0) {
             [self.sleepTimeGroup setSelectedIndex:situation.status];
@@ -106,8 +109,15 @@
     }];
     
     [self.scoreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.editView);
-        make.top.equalTo(self.sleepTimeGroup.mas_bottom).offset(7);
+//        make.centerX.equalTo(self.editView);
+//        make.top.equalTo(self.sleepTimeGroup.mas_bottom).offset(7);
+//        make.bottom.equalTo(self.editView).offset(-12);
+        make.right.equalTo(self.editView).offset(-12);
+        make.bottom.equalTo(self.titleLabel);
+    }];
+    
+    [self.editLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.editView).offset(-12);
         make.bottom.equalTo(self.editView).offset(-12);
     }];
 }
@@ -177,11 +187,28 @@
     return _scoreLabel;
 }
 
+- (UILabel*) editLabel{
+    if (!_editLabel) {
+        _editLabel = [self.editView addLabel];
+        _editLabel.font = [UIFont systemFontOfSize:12];
+        _editLabel.textColor = [UIColor commonGrayTextColor];
+        
+        SleepSituation* situation = self.situation;
+        UserModel* editUser = situation.user;
+        NSString* userName = editUser.userName;
+        _editLabel.text = [NSString stringWithFormat:@"%@ %@", userName, situation.updateTime];
+    }
+    return _editLabel;
+}
+
 #pragma mark - button click event
 - (void) submitButtonClicked:(id) sender{
-    self.situation.status = self.sleepTimeGroup.selectedIndex;
+    
+    SleepSituationParam* param = [SleepSituationParam new];
+    param.code = self.situation.code;
+    param.status = self.sleepTimeGroup.selectedIndex;
     if (self.delegate && [self.delegate respondsToSelector:@selector(submitSleepSituation:)]) {
-        [self.delegate submitSleepSituation:self.situation];
+        [self.delegate submitSleepSituation:param];
     }
 }
 @end
