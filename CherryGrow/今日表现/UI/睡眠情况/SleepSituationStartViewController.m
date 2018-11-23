@@ -128,6 +128,7 @@ SleepSituationEditDelegate>
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     SleepSituationEditTableViewCell* cell = [[SleepSituationEditTableViewCell alloc] initWithSituation:self.sleepSituations[indexPath.row]];
+    
     cell.delegate = self;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;

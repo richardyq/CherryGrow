@@ -158,7 +158,7 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
 - (MealSituation*) mealSituationOfIndex:(NSInteger) row{
     __block MealSituation* mealSituation = nil;
     [self.mealSituations enumerateObjectsUsingBlock:^(MealSituation * _Nonnull situation, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (situation.mealCode == row) {
+        if (situation.code == row) {
             mealSituation = situation;
             *stop = YES;
         }
@@ -169,7 +169,7 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
 #pragma mark - MealSituationEditDelegate
 - (void) submitMealSituation:(MealSituationParam*) situation{
     __weak typeof(self) weakSelf = self;
-    [SituationRequestManager createAddMealSituation:situation.mealCode speed:situation.speed feed:situation.feed amount:situation.amount success:^(id result) {
+    [SituationRequestManager createAddMealSituation:situation.code speed:situation.speed feed:situation.feed amount:situation.amount success:^(id result) {
         if (!weakSelf) {
             return ;
         }

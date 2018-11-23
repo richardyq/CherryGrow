@@ -8,18 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "UserModel.h"
+#import "SituationModel.h"
 
-@interface SleepSituation : NSObject
+@interface SleepDetSituation : SituationDetModel
 
-@property (nonatomic, strong) NSString* id;
-@property (nonatomic, strong) NSString* date;
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, assign) NSInteger status;
 @property (nonatomic, assign) NSInteger score;
 
-@property (nonatomic, strong) UserModel* user;
-@property (nonatomic, strong) NSString* updateTime;
+@end
 
+@interface SleepSituation : SituationModel
+
+@property (nonatomic, assign) NSInteger code;
+@property (nonatomic, assign) NSInteger status;
+@property (nonatomic, assign) NSInteger score;
+
+
+@property (nonatomic, strong) SleepDetSituation* det;
 
 @end
 

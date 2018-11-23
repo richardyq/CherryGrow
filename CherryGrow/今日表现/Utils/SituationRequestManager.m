@@ -11,6 +11,7 @@
 #import "AddMealSituationRequest.h"
 #import "TodaySleepSituationListRequest.h"
 #import "AddSleepSituationRequest.h"
+#import "InterestCatesReqeust.h"
 
 @implementation SituationRequestManager
 
@@ -32,7 +33,7 @@
     CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
     MealSituationParam* situation = [MealSituationParam new];
     situation.date = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
-    situation.mealCode = mealCode;
+    situation.code = mealCode;
     situation.speed = speed;
     situation.feed = feed;
     situation.amount = amount;
@@ -62,6 +63,14 @@
     situation.userId = [UserDefaults shareInstance].loginedUserId;
     
     CDJsonRequest* request = [[AddSleepSituationRequest alloc] initWithSleepSituation:situation];
+    [[CDRequestManager shareInstance] createRequest:request observice:observice];
+}
+
++ (void) createInterestCatesRequest:(CDRequestSuccess) successHandler
+                             failed:(CDRequestFailed) failedHandler
+                           complete:(CDRequestComplete) completeHandler{
+    CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
+    CDJsonRequest* request = [[InterestCatesReqeust alloc] init];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];
 }
 @end

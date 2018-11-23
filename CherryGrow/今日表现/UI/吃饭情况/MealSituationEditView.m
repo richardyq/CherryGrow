@@ -124,7 +124,7 @@
     
     self.scoreLabel.text = [NSString stringWithFormat:@"得分: %.1f", situation.score];
     
-    self.editLabel.text = [NSString stringWithFormat:@"%@ %@", situation.user.userName, situation.updateTime];
+    self.editLabel.text = [NSString stringWithFormat:@"%@ %@", situation.userName, situation.updateTime];
 }
 #pragma mark - settingAndGetting
 - (UILabel*) titleLabel{
@@ -232,7 +232,7 @@
     situation.speed = self.speedRadioGroup.selectedIndex;
     situation.feed = self.askHelpRadioGroup.selectedIndex;
     situation.amount = self.amountRadioGroup.selectedIndex;
-    situation.mealCode = self.mealCode;
+    situation.code = self.mealCode;
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(submitMealSituation:)])
     {

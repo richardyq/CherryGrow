@@ -194,8 +194,8 @@
         _editLabel.textColor = [UIColor commonGrayTextColor];
         
         SleepSituation* situation = self.situation;
-        UserModel* editUser = situation.user;
-        NSString* userName = editUser.userName;
+//        UserModel* editUser = situation.userName;
+        NSString* userName = situation.userName;
         _editLabel.text = [NSString stringWithFormat:@"%@ %@", userName, situation.updateTime];
     }
     return _editLabel;

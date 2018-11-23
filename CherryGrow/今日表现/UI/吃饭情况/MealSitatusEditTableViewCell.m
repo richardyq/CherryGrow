@@ -25,7 +25,7 @@
 - (NSString*) mealTitle{
     NSString* mealTitle = @"早餐";
     
-    switch (self.mealCode) {
+    switch (self.code) {
         case 0:
             mealTitle = @"早餐";
             break;
@@ -73,7 +73,7 @@
         [self.contentView setBackgroundColor:[UIColor commonBackgroundColor]];
         
         [self.editView setMealSituation:situation];
-        [self setMealCode:situation.mealCode];
+        [self setMealCode:situation.code];
         
         [self.editView setDelegate:self.delegate];
     }

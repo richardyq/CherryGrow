@@ -32,4 +32,7 @@
                                  failed:(CDRequestFailed) failedHandler
                                complete:(CDRequestComplete) completeHandler;
 
++ (void) createInterestCatesRequest:(CDRequestSuccess) successHandler
+                             failed:(CDRequestFailed) failedHandler
+                           complete:(CDRequestComplete) completeHandler;
 @end
