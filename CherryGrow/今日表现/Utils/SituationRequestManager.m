@@ -12,6 +12,8 @@
 #import "TodaySleepSituationListRequest.h"
 #import "AddSleepSituationRequest.h"
 #import "InterestCatesReqeust.h"
+#import "AddInterestSituationRequest.h"
+#import "TodayInterestSituationsRequest.h"
 
 @implementation SituationRequestManager
 
@@ -71,6 +73,25 @@
                            complete:(CDRequestComplete) completeHandler{
     CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
     CDJsonRequest* request = [[InterestCatesReqeust alloc] init];
+    [[CDRequestManager shareInstance] createRequest:request observice:observice];
+}
+
++ (void) createAddInterestSituationRequest:(NSInteger) cateId
+                                    status:(NSInteger) status
+                                   success:(CDRequestSuccess) successHandler
+                                    failed:(CDRequestFailed) failedHandler
+                                  complete:(CDRequestComplete) completeHandler{
+    CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
+    
+    CDJsonRequest* request = [[AddInterestSituationRequest alloc] initWithCateId:cateId status:status];
+    [[CDRequestManager shareInstance] createRequest:request observice:observice];
+}
+
++ (void) creatTodayInterestSituationRequest:(CDRequestSuccess) successHandler
+                                     failed:(CDRequestFailed) failedHandler
+                                   complete:(CDRequestComplete) completeHandler{
+    CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
+    CDJsonRequest* request = [[TodayInterestSituationsRequest alloc] init];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];
 }
 @end

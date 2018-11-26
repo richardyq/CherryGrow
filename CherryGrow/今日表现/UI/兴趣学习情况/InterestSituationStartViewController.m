@@ -8,11 +8,18 @@
 
 #import "InterestSituationStartViewController.h"
 #import "InterestCateSelectViewController.h"
+#import "InterestSituationSelectViewController.h"
+#import "SituationRequestManager.h"
+#import "InterestSituation.h"
+#import "TodayInterestSituationTableViewCell.h"
 
 @interface InterestSituationStartViewController ()
-
+<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UIView* bottomView;
 @property (nonatomic, strong) UIButton* appendButton;
+@property (nonatomic, strong) UITableView* tableView;
+
+@property (nonatomic, strong) NSMutableArray<InterestSituation*>* situations;
 
 @end
 
@@ -31,6 +38,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self layoutElements];
+    
+    [self startLoadTodayStatus];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +58,78 @@
         make.height.mas_equalTo(@41);
         make.center.equalTo(self.bottomView);
     }];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.bottomView.mas_bottom);
+    }];
+}
+
+- (void) startLoadTodayStatus{
+    __weak typeof(self) weakSelf = self;
+    [SituationRequestManager creatTodayInterestSituationRequest:^(id result) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        NSArray<InterestSituation*>* situations = ( NSArray<InterestSituation*>*) result;
+        [strongSelf interestSituationLoaded:situations];
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+    } complete:^(NSInteger errorCode) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        if (errorCode == 0) {
+            [strongSelf refreshSituationList];
+        }
+        
+    }];
+}
+
+- (void) showSituationSelectController:(NSInteger) cateId{
+    __weak typeof(self) weakSelf = self;
+    [InterestSituationSelectViewController showWithCateId:cateId handler:^(NSInteger cid, NSInteger status) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf postInterestSituation:cid status:status];
+        
+    }];
+}
+
+- (void) postInterestSituation:(int) cateId status:(NSInteger) status{
+    __weak typeof(self) weakSelf = self;
+    [SituationRequestManager createAddInterestSituationRequest:cateId status:status success:^(id result) {
+        if (!weakSelf || ![result isKindOfClass:[InterestSituation class]]) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        InterestSituation* situation = (InterestSituation*) result;
+        [strongSelf interestSituationAppended:situation];
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+    } complete:^(NSInteger errorCode) {
+        if (!weakSelf || errorCode != 0) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf refreshSituationList];
+    }];
+}
+
+- (void) interestSituationAppended:(InterestSituation*) situation{
+    [self.situations addObject:situation];
+}
+
+- (void) refreshSituationList{
+    [self.tableView reloadData];
+}
+
+- (void) interestSituationLoaded:(NSArray<InterestSituation*>*) situations{
+    _situations = [NSMutableArray<InterestSituation*> arrayWithArray:situations];
 }
 
 #pragma mark - setingAndGetting
@@ -74,9 +155,58 @@
     return _appendButton;
 }
 
+- (UITableView*) tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+        [self.view addSubview:_tableView];
+        [_tableView setDelegate:self];
+        [_tableView setDataSource:self];
+        _tableView.backgroundColor = [UIColor commonBackgroundColor];
+        [_tableView registerClass:[TodayInterestSituationTableViewCell class] forCellReuseIdentifier:@"TodayInterestSituationTableViewCell"];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.estimatedSectionFooterHeight = 0;
+        
+    }
+    return _tableView;
+}
+
+- (NSMutableArray<InterestSituation*>*) situations{
+    if (!_situations) {
+        _situations = [NSMutableArray<InterestSituation*> array];
+    }
+    return _situations;
+}
+
 #pragma mark - button events
 - (void) appendButtonClicked:(id) sender
 {
-    [InterestCateSelectViewController show];
+    __weak typeof(self) weakSelf = self;
+    [InterestCateSelectViewController showWithHandler:^(InterestCateModel *model) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf showSituationSelectController:model.cateId];
+    }];
+}
+
+#pragma mark - table view delegate
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (self.situations) {
+        return self.situations.count;
+    }
+    return 0;
+}
+
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TodayInterestSituationTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"TodayInterestSituationTableViewCell"];
+    [cell setSituation:self.situations[indexPath.row]];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
+    return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.5;
 }
 @end

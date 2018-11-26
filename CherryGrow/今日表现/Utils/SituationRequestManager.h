@@ -35,4 +35,14 @@
 + (void) createInterestCatesRequest:(CDRequestSuccess) successHandler
                              failed:(CDRequestFailed) failedHandler
                            complete:(CDRequestComplete) completeHandler;
+
++ (void) createAddInterestSituationRequest:(NSInteger) cateId
+                                    status:(NSInteger) status
+                                   success:(CDRequestSuccess) successHandler
+                                    failed:(CDRequestFailed) failedHandler
+                                  complete:(CDRequestComplete) completeHandler;
+
++ (void) creatTodayInterestSituationRequest:(CDRequestSuccess) successHandler
+                                     failed:(CDRequestFailed) failedHandler
+                                   complete:(CDRequestComplete) completeHandler;
 @end

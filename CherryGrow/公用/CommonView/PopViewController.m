@@ -14,7 +14,7 @@
 
 @implementation PopViewController
 
-+ (void) show{
++ (PopViewController*) show{
     PopViewController* contoller = [[self alloc] init];
     UIViewController* topmostController = [NSObject topMostController];
     [topmostController addChildViewController:contoller];
@@ -23,6 +23,8 @@
     [contoller.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(topmostController.view);
     }];
+    
+    return contoller;
 }
 
 - (void) loadView{

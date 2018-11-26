@@ -13,6 +13,7 @@
 #import "SituationRequestManager.h"
 #import "MealSituation.h"
 
+
 @interface MealSituationStartViewController ()
 <UITableViewDelegate, UITableViewDataSource, MealSituationEditDelegate>
 @property (nonatomic, strong) UIView* totalScoreView;

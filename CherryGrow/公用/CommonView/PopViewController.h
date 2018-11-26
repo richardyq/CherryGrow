@@ -10,5 +10,7 @@
 
 @interface PopViewController : UIViewController
 
-+ (void) show;
++ (PopViewController*) show;
+
+- (void) closeController;
 @end

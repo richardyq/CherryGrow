@@ -7,7 +7,13 @@
 //
 
 #import "PopViewController.h"
+#import "InterestCateModel.h"
+
+typedef void(^InterestCateSelectHandler)(InterestCateModel* model);
 
 @interface InterestCateSelectViewController : PopViewController
+
++ (void) showWithHandler:(InterestCateSelectHandler) handler;
+
 
 @end
