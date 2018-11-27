@@ -8,6 +8,7 @@
 
 #import "MainStartViewController.h"
 #import "TodayStartViewController.h"
+#import "HistoryStartViewController.h"
 
 @interface MainStartViewController ()
 
@@ -37,7 +38,7 @@
     todayNaviController.tabBarItem.title = @"今天";
     todayNaviController.navigationBar.translucent = NO;
     //历史
-    UIViewController* historyController = [[UIViewController alloc] init];
+    UIViewController* historyController = [[HistoryStartViewController alloc] init];
     UINavigationController* historyNaviController = [[BaseNavigationController alloc] initWithRootViewController:historyController];
     historyController.navigationItem.title = @"历史";
     historyNaviController.tabBarItem.title = @"历史";

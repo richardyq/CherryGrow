@@ -65,14 +65,14 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
 }
 
 - (void) layoutElements{
-    [self.totalScoreView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.equalTo(self.view);
-        make.height.mas_equalTo(@78);
-    }];
+//    [self.totalScoreView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.right.equalTo(self.view);
+//        make.height.mas_equalTo(@78);
+//    }];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.top.equalTo(self.totalScoreView.mas_bottom).offset(12);
+        make.top.equalTo(self.view);
     }];
     
 }

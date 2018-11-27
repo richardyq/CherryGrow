@@ -37,6 +37,11 @@
 		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
 		2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C42182A92500E94CA7 /* MealSituationEditView.m */; };
 		2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */; };
+		256775A621ACD10700095AE1 /* HistoryRecordsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775A521ACD10700095AE1 /* HistoryRecordsRequest.m */; };
+		256775A921ACD36800095AE1 /* HistoryRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775A821ACD36800095AE1 /* HistoryRequestManager.m */; };
+		256775AE21ACD8A200095AE1 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775AB21ACD8A200095AE1 /* HistoryTableViewController.m */; };
+		256775AF21ACD8A200095AE1 /* HistoryStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775AC21ACD8A200095AE1 /* HistoryStartViewController.m */; };
+		256775B221ACE00400095AE1 /* HistorySituationDetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775B121ACE00400095AE1 /* HistorySituationDetTableViewCell.m */; };
 		256AF00821A3A0C600E72143 /* SleepSituationEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AF00721A3A0C600E72143 /* SleepSituationEditTableViewCell.m */; };
 		256AF00B21A3AFDA00E72143 /* SleepSituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AF00A21A3AFDA00E72143 /* SleepSituation.m */; };
 		256AF00E21A3D70300E72143 /* TodaySleepSituationListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AF00D21A3D70300E72143 /* TodaySleepSituationListRequest.m */; };
@@ -49,6 +54,11 @@
 		258A384F21AB8CA7001B3839 /* InterestSituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A384E21AB8CA7001B3839 /* InterestSituation.m */; };
 		258A385221AB9311001B3839 /* TodayInterestSituationsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A385121AB9311001B3839 /* TodayInterestSituationsRequest.m */; };
 		258A385521AB9650001B3839 /* TodayInterestSituationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A385421AB9650001B3839 /* TodayInterestSituationTableViewCell.m */; };
+		258A386421AC0C41001B3839 /* DailySituationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A386321AC0C41001B3839 /* DailySituationModel.m */; };
+		258A386721AC0C6C001B3839 /* SituationHistoryDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A386621AC0C6C001B3839 /* SituationHistoryDetModel.m */; };
+		258A386A21AC0CBE001B3839 /* MealHistoryDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A386921AC0CBE001B3839 /* MealHistoryDetModel.m */; };
+		258A386D21AC0D46001B3839 /* SleepHistoryDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A386C21AC0D46001B3839 /* SleepHistoryDetModel.m */; };
+		258A387021AC0D7A001B3839 /* InterestHistoryDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 258A386F21AC0D7A001B3839 /* InterestHistoryDetModel.m */; };
 		25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B8023F218AFBD200B13113 /* UserLoginRequest.m */; };
 		25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80242218AFC9F00B13113 /* UserRequestUtil.m */; };
 		25B80246218B3EE500B13113 /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80245218B3EE500B13113 /* UserInfoRequest.m */; };
@@ -130,6 +140,16 @@
 		2553F5C42182A92500E94CA7 /* MealSituationEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationEditView.m; sourceTree = "<group>"; };
 		2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSitatusEditTableViewCell.h; sourceTree = "<group>"; };
 		2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSitatusEditTableViewCell.m; sourceTree = "<group>"; };
+		256775A421ACD10700095AE1 /* HistoryRecordsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryRecordsRequest.h; sourceTree = "<group>"; };
+		256775A521ACD10700095AE1 /* HistoryRecordsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryRecordsRequest.m; sourceTree = "<group>"; };
+		256775A721ACD36800095AE1 /* HistoryRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryRequestManager.h; sourceTree = "<group>"; };
+		256775A821ACD36800095AE1 /* HistoryRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryRequestManager.m; sourceTree = "<group>"; };
+		256775AA21ACD8A200095AE1 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		256775AB21ACD8A200095AE1 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		256775AC21ACD8A200095AE1 /* HistoryStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryStartViewController.m; sourceTree = "<group>"; };
+		256775AD21ACD8A200095AE1 /* HistoryStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryStartViewController.h; sourceTree = "<group>"; };
+		256775B021ACE00400095AE1 /* HistorySituationDetTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistorySituationDetTableViewCell.h; sourceTree = "<group>"; };
+		256775B121ACE00400095AE1 /* HistorySituationDetTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistorySituationDetTableViewCell.m; sourceTree = "<group>"; };
 		256AF00621A3A0C600E72143 /* SleepSituationEditTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepSituationEditTableViewCell.h; sourceTree = "<group>"; };
 		256AF00721A3A0C600E72143 /* SleepSituationEditTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepSituationEditTableViewCell.m; sourceTree = "<group>"; };
 		256AF00921A3AFDA00E72143 /* SleepSituation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepSituation.h; sourceTree = "<group>"; };
@@ -154,6 +174,20 @@
 		258A385121AB9311001B3839 /* TodayInterestSituationsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayInterestSituationsRequest.m; sourceTree = "<group>"; };
 		258A385321AB9650001B3839 /* TodayInterestSituationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayInterestSituationTableViewCell.h; sourceTree = "<group>"; };
 		258A385421AB9650001B3839 /* TodayInterestSituationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayInterestSituationTableViewCell.m; sourceTree = "<group>"; };
+		258A385B21AC095C001B3839 /* HistoryStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryStartViewController.m; sourceTree = "<group>"; };
+		258A385C21AC095C001B3839 /* HistoryStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryStartViewController.h; sourceTree = "<group>"; };
+		258A385E21AC0988001B3839 /* HistoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		258A385F21AC0988001B3839 /* HistoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		258A386221AC0C41001B3839 /* DailySituationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailySituationModel.h; sourceTree = "<group>"; };
+		258A386321AC0C41001B3839 /* DailySituationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailySituationModel.m; sourceTree = "<group>"; };
+		258A386521AC0C6C001B3839 /* SituationHistoryDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SituationHistoryDetModel.h; sourceTree = "<group>"; };
+		258A386621AC0C6C001B3839 /* SituationHistoryDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SituationHistoryDetModel.m; sourceTree = "<group>"; };
+		258A386821AC0CBE001B3839 /* MealHistoryDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealHistoryDetModel.h; sourceTree = "<group>"; };
+		258A386921AC0CBE001B3839 /* MealHistoryDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealHistoryDetModel.m; sourceTree = "<group>"; };
+		258A386B21AC0D46001B3839 /* SleepHistoryDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepHistoryDetModel.h; sourceTree = "<group>"; };
+		258A386C21AC0D46001B3839 /* SleepHistoryDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepHistoryDetModel.m; sourceTree = "<group>"; };
+		258A386E21AC0D7A001B3839 /* InterestHistoryDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterestHistoryDetModel.h; sourceTree = "<group>"; };
+		258A386F21AC0D7A001B3839 /* InterestHistoryDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestHistoryDetModel.m; sourceTree = "<group>"; };
 		25B8023E218AFBD200B13113 /* UserLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLoginRequest.h; sourceTree = "<group>"; };
 		25B8023F218AFBD200B13113 /* UserLoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginRequest.m; sourceTree = "<group>"; };
 		25B80241218AFC9F00B13113 /* UserRequestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequestUtil.h; sourceTree = "<group>"; };
@@ -294,6 +328,7 @@
 		253C5526217FFFC200BC3DDB /* CherryGrow */ = {
 			isa = PBXGroup;
 			children = (
+				258A385621AC092C001B3839 /* 历史情况 */,
 				25F7CFD02181AB09001C19A3 /* 今日表现 */,
 				25F7CFC52181985D001C19A3 /* 主界面 */,
 				253C55512180064C00BC3DDB /* 用户 */,
@@ -451,6 +486,69 @@
 				253C55722180128000BC3DDB /* UserLoginViewController.m */,
 			);
 			path = "登录";
+			sourceTree = "<group>";
+		};
+		2567759C21ACD0DB00095AE1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				256775A421ACD10700095AE1 /* HistoryRecordsRequest.h */,
+				256775A521ACD10700095AE1 /* HistoryRecordsRequest.m */,
+				256775A721ACD36800095AE1 /* HistoryRequestManager.h */,
+				256775A821ACD36800095AE1 /* HistoryRequestManager.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2567759D21ACD0DC00095AE1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				256775AD21ACD8A200095AE1 /* HistoryStartViewController.h */,
+				256775AC21ACD8A200095AE1 /* HistoryStartViewController.m */,
+				256775AA21ACD8A200095AE1 /* HistoryTableViewController.h */,
+				256775AB21ACD8A200095AE1 /* HistoryTableViewController.m */,
+				256775B021ACE00400095AE1 /* HistorySituationDetTableViewCell.h */,
+				256775B121ACE00400095AE1 /* HistorySituationDetTableViewCell.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		258A385621AC092C001B3839 /* 历史情况 */ = {
+			isa = PBXGroup;
+			children = (
+				2567759C21ACD0DB00095AE1 /* Request */,
+				2567759D21ACD0DC00095AE1 /* UI */,
+				258A386121AC0C25001B3839 /* DateModel */,
+				258A385A21AC095C001B3839 /* UI */,
+			);
+			path = "历史情况";
+			sourceTree = "<group>";
+		};
+		258A385A21AC095C001B3839 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				258A385C21AC095C001B3839 /* HistoryStartViewController.h */,
+				258A385B21AC095C001B3839 /* HistoryStartViewController.m */,
+				258A385E21AC0988001B3839 /* HistoryTableViewController.h */,
+				258A385F21AC0988001B3839 /* HistoryTableViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		258A386121AC0C25001B3839 /* DateModel */ = {
+			isa = PBXGroup;
+			children = (
+				258A386221AC0C41001B3839 /* DailySituationModel.h */,
+				258A386321AC0C41001B3839 /* DailySituationModel.m */,
+				258A386521AC0C6C001B3839 /* SituationHistoryDetModel.h */,
+				258A386621AC0C6C001B3839 /* SituationHistoryDetModel.m */,
+				258A386821AC0CBE001B3839 /* MealHistoryDetModel.h */,
+				258A386921AC0CBE001B3839 /* MealHistoryDetModel.m */,
+				258A386B21AC0D46001B3839 /* SleepHistoryDetModel.h */,
+				258A386C21AC0D46001B3839 /* SleepHistoryDetModel.m */,
+				258A386E21AC0D7A001B3839 /* InterestHistoryDetModel.h */,
+				258A386F21AC0D7A001B3839 /* InterestHistoryDetModel.m */,
+			);
+			path = DateModel;
 			sourceTree = "<group>";
 		};
 		25B8023D218AFB8700B13113 /* Request */ = {
@@ -709,15 +807,20 @@
 				253C5549218002BB00BC3DDB /* PageViewControllerManager.m in Sources */,
 				2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */,
 				258A384F21AB8CA7001B3839 /* InterestSituation.m in Sources */,
+				258A386D21AC0D46001B3839 /* SleepHistoryDetModel.m in Sources */,
 				253C555E218008DF00BC3DDB /* UserDefaults.m in Sources */,
 				253C55572180066F00BC3DDB /* UserAccountModel.m in Sources */,
+				258A386721AC0C6C001B3839 /* SituationHistoryDetModel.m in Sources */,
 				2531939F21A55AE10014A23A /* InterestCatesReqeust.m in Sources */,
 				253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */,
+				256775AE21ACD8A200095AE1 /* HistoryTableViewController.m in Sources */,
 				25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */,
 				256AF00E21A3D70300E72143 /* TodaySleepSituationListRequest.m in Sources */,
 				253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */,
+				258A386421AC0C41001B3839 /* DailySituationModel.m in Sources */,
 				256AF00B21A3AFDA00E72143 /* SleepSituation.m in Sources */,
 				25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */,
+				256775B221ACE00400095AE1 /* HistorySituationDetTableViewCell.m in Sources */,
 				2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */,
 				25FAA35E2180248E006C8588 /* UserModel.m in Sources */,
 				256AF00821A3A0C600E72143 /* SleepSituationEditTableViewCell.m in Sources */,
@@ -738,8 +841,10 @@
 				253C5529217FFFC200BC3DDB /* AppDelegate.m in Sources */,
 				25F7CFEF2181BE3B001C19A3 /* RadioButton.m in Sources */,
 				25B80249218B49B600B13113 /* HttpRequestUrlUtil.m in Sources */,
+				256775A621ACD10700095AE1 /* HistoryRecordsRequest.m in Sources */,
 				253193A221A55B210014A23A /* InterestCateModel.m in Sources */,
 				258A385521AB9650001B3839 /* TodayInterestSituationTableViewCell.m in Sources */,
+				256775A921ACD36800095AE1 /* HistoryRequestManager.m in Sources */,
 				2531939921A556E70014A23A /* PopViewController.m in Sources */,
 				258A385221AB9311001B3839 /* TodayInterestSituationsRequest.m in Sources */,
 				25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */,
@@ -754,6 +859,7 @@
 				250E454D21A286A100BEEC58 /* AddMealSituationRequest.m in Sources */,
 				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
 				258A384C21AB8B15001B3839 /* AddInterestSituationRequest.m in Sources */,
+				256775AF21ACD8A200095AE1 /* HistoryStartViewController.m in Sources */,
 				258A384921AB7FF1001B3839 /* InterestSituationSelectViewController.m in Sources */,
 				253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */,
 				250E454321A262FD00BEEC58 /* TodayMealSituationListRequest.m in Sources */,
@@ -761,6 +867,8 @@
 				25F7CFDA2181AD6B001C19A3 /* TagView.m in Sources */,
 				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,
 				25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */,
+				258A387021AC0D7A001B3839 /* InterestHistoryDetModel.m in Sources */,
+				258A386A21AC0CBE001B3839 /* MealHistoryDetModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

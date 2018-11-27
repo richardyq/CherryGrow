@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UILabel* titleLabel;
 @property (nonatomic, strong) UILabel* statusLabel;
 
+@property (nonatomic, strong) UILabel* updateLable;
+
 @end
 
 @implementation TodayInterestSituationTableViewCell
@@ -46,14 +48,20 @@
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.situationView);
+        
         make.left.equalTo(self.situationView).offset(12.5);
-        make.height.equalTo(self.situationView).offset(-33);
+        make.top.equalTo(self.situationView).offset(12);
     }];
     
     [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.situationView);
+        make.top.equalTo(self.titleLabel);
         make.right.equalTo(self.situationView).offset(-12.5);
+    }];
+    
+    [self.updateLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.statusLabel.mas_bottom).offset(8);
+        make.right.equalTo(self.situationView).offset(-12.5);
+        make.bottom.equalTo(self.situationView).offset(-11);
     }];
 }
 
@@ -86,9 +94,19 @@
     return _statusLabel;
 }
 
+- (UILabel*) updateLable{
+    if (!_updateLable) {
+        _updateLable = [self.situationView addLabel];
+        _updateLable.font = [UIFont systemFontOfSize:12];
+        _updateLable.textColor = [UIColor commonGrayTextColor];
+    }
+    return _updateLable;
+}
+
 - (void) setSituation:(InterestSituation *)situation{
     _situation = situation;
     self.titleLabel.text = situation.cateName;
     self.statusLabel.text = situation.statusName;
+    self.updateLable.text = [NSString stringWithFormat:@"%@ %@", situation.userName, situation.updateTime];
 }
 @end
