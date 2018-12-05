@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TodaySituationViewController.h"
 
-@interface InterestSituationStartViewController : UIViewController
+@interface InterestSituationStartViewController : TodaySituationViewController
 
 @end

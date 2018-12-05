@@ -42,9 +42,7 @@
         
         userAccount = (UserAccountModel*) result;
         [[UserDefaults shareInstance] setLoginedUserAccount:userAccount];
-        if(success){
-            success(userAccount);
-        }
+        
         
     } failed:^(NSInteger errorCode, NSString *message) {
         [NSObject showAlert:message];
@@ -52,7 +50,9 @@
             fail(errorCode, message);
         }
     } complete:^(NSInteger errorCode) {
-        
+        if(success && errorCode == 0){
+            success(userAccount);
+        }
     }];
 }
 

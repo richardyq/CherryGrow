@@ -41,7 +41,7 @@
 #pragma mark - settingAndGetting
 - (NSArray<UIViewController*>*) controllers{
     if (!_controllers) {
-        NSArray<NSString*>* classnames = @[@"MealSituationStartViewController", @"SleepSituationStartViewController", @"InterestSituationStartViewController", @"GeneralSituationStartCommonViewController"];
+        NSArray<NSString*>* classnames = @[@"MealSituationStartViewController", @"SleepSituationStartViewController", @"InterestSituationStartViewController"];
         
         NSMutableArray<UIViewController*>* controllers = [NSMutableArray<UIViewController*> array];
         [classnames enumerateObjectsUsingBlock:^(NSString * _Nonnull classname, NSUInteger idx, BOOL * _Nonnull stop) {

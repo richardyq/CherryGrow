@@ -43,7 +43,7 @@
         [strongSelf startLoadUserInfo:accountModel.userId];
         
     } failed:^(NSInteger errCode, NSString *errMsg) {
-        
+        [[PageViewControllerManager defaultManager] entryUserLoginPage];
     }];
 }
 
@@ -60,7 +60,7 @@
         
         [strongSelf userInfoLoaded];
     } failed:^(NSInteger errCode, NSString *errMsg) {
-        
+        [[PageViewControllerManager defaultManager] entryUserLoginPage];
     }];
 }
 

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD149F10AB93674AD508C9F56154C03F"
+               BlueprintIdentifier = "9A3BE31D1675365C63A1930527B32645"
                BlueprintName = "Pods-CherryGrow"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-CherryGrow.a">

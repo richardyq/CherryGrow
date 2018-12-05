@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CherryGrow/&#x4eca;&#x65e5;&#x8868;&#x73b0;/UI/&#x7761;&#x7720;&#x60c5;&#x51b5;/SleepSituationEditTableViewCell.m"
-            timestampString = "564646612.564715"
+            filePath = "Pods/CherryRequest/CherryRequest/Classes/RequestManager/CDJsonRequest.m"
+            timestampString = "565597597.556105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "-submitButtonClicked:"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-jsonPostFailed:Error:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/CherryRequest/CherryRequest/Classes/RequestManager/CDJsonRequest.m"
+            timestampString = "565597597.556182"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-jsonPostSuccess:Response:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -20,11 +20,6 @@
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray<MealSituation*>* mealSituations;
 
-/*
-@property (nonatomic, strong) MealSituationEditView* breakfastSituationView;
-@property (nonatomic, strong) MealSituationEditView* lunchSituationView;
-@property (nonatomic, strong) MealSituationEditView* dinnerSituationView;
-*/
 @end
 
 typedef NS_ENUM(NSUInteger, MealIndex) {
@@ -56,7 +51,7 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
     [self layoutElements];
     
     
-    [self startLoadTodaySituations];
+    //[self startLoadTodaySituations];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,7 +72,7 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
     
 }
 
-- (void) startLoadTodaySituations{
+- (void) loadToadySituation{
     __weak typeof(self) weakSelf = self;
     [SituationRequestManager createTodayMealSituationRequst:^(id result) {
         if (!weakSelf) {
@@ -87,13 +82,20 @@ typedef NS_ENUM(NSUInteger, MealIndex) {
         NSArray<MealSituation*>* mealSituations = result;
         [strongSelf setMealSituations:[NSMutableArray<MealSituation*> arrayWithArray:mealSituations]];
     } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
         
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf todaySituationsLoadFailed];
     } complete:^(NSInteger errorCode) {
         if (!weakSelf) {
             return ;
         }
         __strong typeof(self) strongSelf = weakSelf;
         if (errorCode == 0) {
+            [strongSelf todaySituationsLoaded];
             [strongSelf.tableView reloadData];
         }
     }];

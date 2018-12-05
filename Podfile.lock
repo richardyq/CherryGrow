@@ -18,6 +18,7 @@ PODS:
     - AFNetworking
   - Masonry (1.1.0)
   - MJExtension (3.0.15)
+  - SVProgressHUD (2.2.5)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - CherryRequest (from `https://github.com/richardyq/CherryRequest.git`)
   - Masonry
   - MJExtension
+  - SVProgressHUD
   - YYKit (~> 1.0.9)
 
 EXTERNAL SOURCES:
@@ -34,7 +36,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CherryRequest:
-    :commit: 5e2194c23798e710225965b8fc26a463cdea94e4
+    :commit: f32546c722b87cdd8e0ff655b2507218d9e5af4e
     :git: https://github.com/richardyq/CherryRequest.git
 
 SPEC CHECKSUMS:
@@ -42,8 +44,9 @@ SPEC CHECKSUMS:
   CherryRequest: c72257e0041ac688fa28814dcab5244f9992396f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 3f039575db1b135a20699ad298713b26acec1528
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 97be8cf737b53d3187fd08c71bb01cdc3ae80685
+PODFILE CHECKSUM: d16b8d4642e4d6aa178bc19e100c5fd2da5699d1
 
 COCOAPODS: 1.4.0

@@ -37,7 +37,6 @@ SleepSituationEditDelegate>
     
     [self layoutElements];
     
-    [self loadSleepSituations];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +55,7 @@ SleepSituationEditDelegate>
     }];
 }
 
-- (void) loadSleepSituations{
+- (void) loadToadySituation{
     __weak typeof(self) weakSelf = self;
     [SituationRequestManager createTodaySleepSituationRequst:^(id result) {
         if (!weakSelf) {
@@ -66,13 +65,20 @@ SleepSituationEditDelegate>
         NSArray<SleepSituation*>* situations = (NSArray<SleepSituation*>*) result;
         [strongSelf sleepSituationListLoaded:situations];
     } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
         
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf todaySituationsLoadFailed];
     } complete:^(NSInteger errorCode) {
         if (!weakSelf) {
             return ;
         }
         __strong typeof(self) strongSelf = weakSelf;
         if (errorCode == 0) {
+            [strongSelf todaySituationsLoaded];
             [strongSelf.tableView reloadData];
         }
     }];

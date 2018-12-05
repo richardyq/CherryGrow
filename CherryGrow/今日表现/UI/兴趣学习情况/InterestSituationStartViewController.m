@@ -38,8 +38,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self layoutElements];
-    
-    [self startLoadTodayStatus];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,7 +63,7 @@
     }];
 }
 
-- (void) startLoadTodayStatus{
+- (void) loadToadySituation{
     __weak typeof(self) weakSelf = self;
     [SituationRequestManager creatTodayInterestSituationRequest:^(id result) {
         if (!weakSelf) {
@@ -76,12 +74,18 @@
         [strongSelf interestSituationLoaded:situations];
     } failed:^(NSInteger errorCode, NSString *message) {
         [NSObject showAlert:message];
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf todaySituationsLoadFailed];
     } complete:^(NSInteger errorCode) {
         if (!weakSelf) {
             return ;
         }
         __strong typeof(self) strongSelf = weakSelf;
         if (errorCode == 0) {
+            [strongSelf loadSituationTime];
             [strongSelf refreshSituationList];
         }
         
@@ -95,6 +99,7 @@
             return ;
         }
         __strong typeof(self) strongSelf = weakSelf;
+        
         [strongSelf postInterestSituation:cid status:status];
         
     }];
