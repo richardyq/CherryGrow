@@ -10,6 +10,8 @@
 
 @interface HistoryTableViewController : UITableViewController
 
+- (void) startLoadRecords;
 
+- (void) startLoadHistory:(NSInteger) type startDate:(NSString*) startDate endDate:(NSString*) endDate;
 
 @end

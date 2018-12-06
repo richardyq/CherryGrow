@@ -48,6 +48,9 @@
 
 @property (nonatomic, strong) NSMutableArray<DailySituationModel*>* historyModels;
 @property (nonatomic, assign) NSInteger totalCount;
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, strong) NSString* startDate;
+@property (nonatomic, strong) NSString* endDate;
 
 @end
 
@@ -70,8 +73,11 @@
 }
 
 - (void) startLoadRecords{
+    _type = 0;
+    _startDate = nil;
+    _endDate = nil;
     __weak typeof(self) weakSelf = self;
-    [HistoryRequestManager createHistoryRecordRequest:0 startRow:0 rows:7 startDate:nil endDate:nil success:^(id result) {
+    [HistoryRequestManager createHistoryRecordRequest:0 startRow:0 rows:20 startDate:nil endDate:nil success:^(id result) {
         if (!weakSelf) {
             return ;
         }
@@ -90,11 +96,87 @@
         }
         __strong typeof(self) strongSelf = weakSelf;
         [strongSelf.tableView reloadData];
+        [strongSelf refreshFooter];
+    }];
+}
+
+- (void) startLoadHistory:(NSInteger) type startDate:(NSString*) startDate endDate:(NSString*) endDate{
+    __weak typeof(self) weakSelf = self;
+    _type = type;
+    _startDate = startDate;
+    _endDate = endDate;
+    [HistoryRequestManager createHistoryRecordRequest:type startRow:0 rows:20 startDate:startDate endDate:endDate success:^(id result) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        if ([result isKindOfClass:[SituationHistoryRetModel class]]) {
+            SituationHistoryRetModel* retModel = (SituationHistoryRetModel*) result;
+            [strongSelf historyModelsLoaded:retModel.list];
+            strongSelf.totalCount = retModel.count;
+        }
+        
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+    } complete:^(NSInteger errorCode) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.tableView reloadData];
+        [strongSelf refreshFooter];
+    }];
+}
+
+- (void) startLoadMoreHistory{
+    __weak typeof(self) weakSelf = self;
+
+    [HistoryRequestManager createHistoryRecordRequest:self.type startRow:self.historyModels.count rows:20 startDate:self.startDate endDate:self.endDate success:^(id result) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        if ([result isKindOfClass:[SituationHistoryRetModel class]]) {
+            SituationHistoryRetModel* retModel = (SituationHistoryRetModel*) result;
+            [strongSelf moreHistoryModelsLoaded:retModel.list];
+            strongSelf.totalCount = retModel.count;
+        }
+        
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+    } complete:^(NSInteger errorCode) {
+        if (!weakSelf) {
+            return ;
+        }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.tableView reloadData];
+        [strongSelf refreshFooter];
     }];
 }
 
 - (void) historyModelsLoaded:(NSArray<DailySituationModel*>*) models{
     self.historyModels = [NSMutableArray<DailySituationModel*> arrayWithArray:models];
+}
+
+- (void) moreHistoryModelsLoaded:(NSArray<DailySituationModel*>*) models{
+    //historyModelsLoaded
+    [self.historyModels addObjectsFromArray:models];
+}
+
+- (void) refreshFooter{
+    
+    if (self.historyModels.count >= self.totalCount) {
+        if (self.tableView.mj_footer) {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
+    }
+    else{
+        if (self.tableView.mj_footer) {
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
+        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(startLoadMoreHistory)];
+    }
 }
 
 #pragma mark - settingAndGetting

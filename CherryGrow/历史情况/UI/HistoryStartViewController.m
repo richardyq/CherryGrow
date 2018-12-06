@@ -190,7 +190,7 @@
 
 - (NSDate*) startDate{
     NSString* startDateString = self.startDateTextField.text;
-    if (!startDateString) {
+    if (!startDateString || startDateString.length == 0) {
         return nil;
     }
     NSDate* date = [NSDate dateWithString:startDateString format:@"yyyy-MM-dd"];
@@ -199,7 +199,7 @@
 
 - (NSDate*) endDate{
     NSString* endDateString = self.endDateTextField.text;
-    if (!endDateString) {
+    if (!endDateString || endDateString.length == 0) {
         return nil;
     }
     NSDate* date = [NSDate dateWithString:endDateString format:@"yyyy-MM-dd"];
@@ -245,6 +245,7 @@
         _queryButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [_queryButton setBackgroundImage:[UIImage rectImage:[UIColor mainThemeColor] size:CGSizeMake(100, 41)] forState:UIControlStateNormal];
         [_queryButton setCornerRadius:4];
+        [_queryButton addTarget:self action:@selector(queryButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _queryButton;
 }
@@ -257,6 +258,8 @@
         _clearButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [_clearButton setBackgroundImage:[UIImage rectImage:[UIColor mainThemeColor] size:CGSizeMake(100, 41)] forState:UIControlStateNormal];
         [_clearButton setCornerRadius:4];
+        
+        [_clearButton addTarget:self action:@selector(clearButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _clearButton;
 }
@@ -298,5 +301,42 @@
 - (void) setTypeModel:(HistoryTypeModel *)typeModel{
     _typeModel = typeModel;
     self.typeLabel.text = typeModel.typeName;
+}
+
+- (void) queryButtonClicked:(id) sender{
+    NSString* startDateStr = nil;
+    if (self.startDate ) {
+        if ([self.startDate compare:[NSDate date]] == NSOrderedDescending) {
+            [NSObject showAlert:@"开始时间不能大于今天"];
+            return;
+        }
+        startDateStr = [self.startDate stringWithFormat:@"yyyy-MM-dd"];
+    }
+    NSString* endDateStr = nil;
+    if (self.endDate ) {
+        if ([self.endDate compare:[NSDate date]] == NSOrderedDescending) {
+            [NSObject showAlert:@"结束时间不能大于今天"];
+            return;
+        }
+        endDateStr = [self.endDate stringWithFormat:@"yyyy-MM-dd"];
+    }
+    
+    if (self.startDate && self.endDate &&
+        [self.startDate compare:self.endDate]) {
+        [NSObject showAlert:@"开始时间不能大于结束时间。"];
+        return;
+    }
+    
+    
+    [self.tableViewController startLoadHistory:self.typeModel.type startDate:startDateStr endDate:endDateStr];
+}
+
+- (void) clearButtonClicked:(id) sender{
+    self.startDateTextField.text = nil;
+    self.endDateTextField.text = nil;
+    [self setTypeModel:[HistoryTypeModel typeModel:HistoryType_All]];
+    
+    [self.tableViewController startLoadRecords];
+    
 }
 @end

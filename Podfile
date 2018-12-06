@@ -5,6 +5,7 @@ pod 'MJExtension'
 pod 'YYKit', '~> 1.0.9'
 pod 'Masonry'
 pod 'SVProgressHUD'
+pod 'MJRefresh'
 
 pod 'CherryRequest',:git=>'https://github.com/richardyq/CherryRequest.git'
 
