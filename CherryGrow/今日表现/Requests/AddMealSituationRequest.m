@@ -17,7 +17,7 @@
     if(self){
         
         NSMutableDictionary* postParam = [situation mj_keyValues];
-        
+        [postParam setValue:@([UserDefaults shareInstance].kidId) forKey:@"kidId"];
         _paramDictionary = postParam;
     }
     return self;

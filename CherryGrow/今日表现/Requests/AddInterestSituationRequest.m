@@ -35,6 +35,7 @@
         param.date = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
         
         _paramDictionary = [param mj_keyValues];
+        [_paramDictionary setValue:@([UserDefaults shareInstance].kidId) forKey:@"kidId"];
     }
     return self;
 }
