@@ -24,5 +24,6 @@ typedef NS_ENUM(NSUInteger, EUserGender) {
 @property (nonatomic, strong) NSString* relation;
 @property (nonatomic, assign) EUserGender gender;
 @property (nonatomic, strong) NSString* portraitUrl;
+@property (nonatomic, assign) NSInteger kidId;
 
 @end

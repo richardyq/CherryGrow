@@ -21,4 +21,9 @@
                            failed:(CDRequestFailed) failedHandler
                          complete:(CDRequestComplete) completeHandler;
 
++ (void) createGetKidInfoRequest:(NSInteger) id
+                        success:(CDRequestSuccess) successHandler
+                        failed:(CDRequestFailed) failedHandler
+                        complete:(CDRequestComplete) completeHandler;
+
 @end

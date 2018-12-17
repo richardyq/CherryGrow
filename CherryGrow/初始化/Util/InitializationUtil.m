@@ -75,7 +75,21 @@
 //}
 
 - (void) userInfoLoaded{
-    [[PageViewControllerManager defaultManager] entryMainStartPage];
+    //
+    UserModel* userModel = [UserDefaults shareInstance].loginedUserModel;
+    NSInteger kidId = userModel.kidId;
+    [self startLoadKidInfo:kidId];
+}
+
+- (void) startLoadKidInfo:(NSInteger) kidId{
+    
+    [UserUtil startGetKidInfo:kidId success:^(id result) {
+        KidInfoModel* kidInfoModel = (KidInfoModel*) result;
+        [[UserDefaults shareInstance] setKidInfoModel:kidInfoModel];
+        [[PageViewControllerManager defaultManager] entryMainStartPage];
+    } failed:^(NSInteger errCode, NSString *errMsg) {
+        [[PageViewControllerManager defaultManager] entryUserLoginPage];
+    }];
 }
 
 @end

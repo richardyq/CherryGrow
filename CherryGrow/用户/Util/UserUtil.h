@@ -21,4 +21,8 @@
 + (void) startGetUserInfo:(NSString*) userId
                   success:(CherrySuccessHandler) success
                    failed:(CherryFailedHandler) fail;
+
++ (void) startGetKidInfo:(NSInteger) kidId
+                 success:(CherrySuccessHandler) success
+                  failed:(CherryFailedHandler) fail;
 @end

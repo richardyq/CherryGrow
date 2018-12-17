@@ -64,6 +64,8 @@
 		25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80242218AFC9F00B13113 /* UserRequestUtil.m */; };
 		25B80246218B3EE500B13113 /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80245218B3EE500B13113 /* UserInfoRequest.m */; };
 		25B80249218B49B600B13113 /* HttpRequestUrlUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80248218B49B600B13113 /* HttpRequestUrlUtil.m */; };
+		25D771A221C73D43003A1E3E /* KidInfoReqeust.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771A121C73D43003A1E3E /* KidInfoReqeust.m */; };
+		25D771A521C73D7F003A1E3E /* KidInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771A421C73D7F003A1E3E /* KidInfoModel.m */; };
 		25F7CFC421817733001C19A3 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F7CFC321817733001C19A3 /* UserList.plist */; };
 		25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCB21819895001C19A3 /* MainStartViewController.m */; };
 		25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */; };
@@ -198,6 +200,10 @@
 		25B80245218B3EE500B13113 /* UserInfoRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoRequest.m; sourceTree = "<group>"; };
 		25B80247218B49B600B13113 /* HttpRequestUrlUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestUrlUtil.h; sourceTree = "<group>"; };
 		25B80248218B49B600B13113 /* HttpRequestUrlUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequestUrlUtil.m; sourceTree = "<group>"; };
+		25D771A021C73D43003A1E3E /* KidInfoReqeust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidInfoReqeust.h; sourceTree = "<group>"; };
+		25D771A121C73D43003A1E3E /* KidInfoReqeust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidInfoReqeust.m; sourceTree = "<group>"; };
+		25D771A321C73D7F003A1E3E /* KidInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidInfoModel.h; sourceTree = "<group>"; };
+		25D771A421C73D7F003A1E3E /* KidInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidInfoModel.m; sourceTree = "<group>"; };
 		25F7CFC321817733001C19A3 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
 		25F7CFCA21819895001C19A3 /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
 		25F7CFCB21819895001C19A3 /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
@@ -453,6 +459,8 @@
 				253C55562180066F00BC3DDB /* UserAccountModel.m */,
 				25FAA35C2180248E006C8588 /* UserModel.h */,
 				25FAA35D2180248E006C8588 /* UserModel.m */,
+				25D771A321C73D7F003A1E3E /* KidInfoModel.h */,
+				25D771A421C73D7F003A1E3E /* KidInfoModel.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -564,6 +572,8 @@
 				25B80242218AFC9F00B13113 /* UserRequestUtil.m */,
 				25B80244218B3EE500B13113 /* UserInfoRequest.h */,
 				25B80245218B3EE500B13113 /* UserInfoRequest.m */,
+				25D771A021C73D43003A1E3E /* KidInfoReqeust.h */,
+				25D771A121C73D43003A1E3E /* KidInfoReqeust.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -828,6 +838,7 @@
 				256775AE21ACD8A200095AE1 /* HistoryTableViewController.m in Sources */,
 				25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */,
 				256AF00E21A3D70300E72143 /* TodaySleepSituationListRequest.m in Sources */,
+				25D771A521C73D7F003A1E3E /* KidInfoModel.m in Sources */,
 				253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */,
 				258A386421AC0C41001B3839 /* DailySituationModel.m in Sources */,
 				256AF00B21A3AFDA00E72143 /* SleepSituation.m in Sources */,
@@ -845,6 +856,7 @@
 				257CAC0D21A78C820087FBAE /* SituationModel.m in Sources */,
 				253C5537217FFFC200BC3DDB /* main.m in Sources */,
 				256AF01121A3D78500E72143 /* AddSleepSituationRequest.m in Sources */,
+				25D771A221C73D43003A1E3E /* KidInfoReqeust.m in Sources */,
 				25F7CFF22181BFEB001C19A3 /* RadioGroup.m in Sources */,
 				25FAA35821801D48006C8588 /* UIImage+ShapeExt.m in Sources */,
 				25F7CFDF2181AEAD001C19A3 /* MealSituationStartViewController.m in Sources */,

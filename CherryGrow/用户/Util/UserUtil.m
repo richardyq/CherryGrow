@@ -10,6 +10,8 @@
 #import "UserRequestUtil.h"
 #import "UserAccountModel.h"
 #import "UserModel.h"
+#import "KidInfoReqeust.h"
+#import "KidInfoModel.h"
 
 @implementation UserUtil
 
@@ -65,6 +67,25 @@
         
         if(success){
             success(userInfo);
+        }
+    } failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+        if (fail) {
+            fail(errorCode, message);
+        }
+    } complete:^(NSInteger errorCode) {
+        
+    }];
+}
+
++ (void) startGetKidInfo:(NSInteger) kidId
+                 success:(CherrySuccessHandler) success
+                  failed:(CherryFailedHandler) fail{
+    __block KidInfoModel* kidInfoModel = nil;
+    [UserRequestUtil createGetKidInfoRequest:kidId success:^(id result) {
+        kidInfoModel = (KidInfoModel*) result;
+        if(success){
+            success(kidInfoModel);
         }
     } failed:^(NSInteger errorCode, NSString *message) {
         [NSObject showAlert:message];

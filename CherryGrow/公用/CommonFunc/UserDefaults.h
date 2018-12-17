@@ -10,6 +10,7 @@
 
 @class UserAccountModel;
 @class UserModel;
+@class KidInfoModel;
 
 @interface UserDefaults : NSObject
 
@@ -28,5 +29,9 @@
 @property (nonatomic, strong) UserModel* loginedUserModel;
 
 @property (nonatomic, readonly) NSString* loginedUserId;
+
+@property (nonatomic, strong) KidInfoModel* kidInfoModel;
+
+@property (nonatomic, readonly) NSInteger kidId;
 
 @end

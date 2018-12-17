@@ -9,11 +9,13 @@
 #import "UserDefaults.h"
 #import "UserAccountModel.h"
 #import "UserModel.h"
+#import "KidInfoModel.h"
 
 static UserDefaults* shareInstance = nil;
 
 static NSString* loginedUserAccountKey = @"loginedUserAccount";
 static NSString* loginedUserKey = @"loginedUser";
+static NSString* kidInfoModelKey = @"kidInfoModel";
 
 @interface UserDefaults ()
 
@@ -91,5 +93,31 @@ static NSString* loginedUserKey = @"loginedUser";
         loginedUserId = loginedUser.userId;
     }
     return loginedUserId;
+}
+
+- (KidInfoModel*) kidInfoModel{
+    NSDictionary* kidInfoDictionary = [self.userdefaults valueForKey:kidInfoModelKey];
+    if (kidInfoDictionary) {
+        KidInfoModel* kidInfoModel = [KidInfoModel mj_objectWithKeyValues:kidInfoDictionary];
+        return kidInfoModel;
+    }
+    return nil;
+}
+
+- (void) setKidInfoModel:(KidInfoModel *)kidInfoModel{
+    if (!kidInfoModel) {
+        [self.userdefaults removeObjectForKey:kidInfoModelKey];
+    }
+    else{
+        [self.userdefaults setObject:[kidInfoModel mj_keyValues] forKey:kidInfoModelKey];
+    }
+}
+
+- (NSInteger) kidId{
+    KidInfoModel* kidInfoModel = self.kidInfoModel;
+    if (!kidInfoModel) {
+        return 0;
+    }
+    return kidInfoModel.id;
 }
 @end

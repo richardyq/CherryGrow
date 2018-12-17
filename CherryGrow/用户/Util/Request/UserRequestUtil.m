@@ -9,6 +9,8 @@
 #import "UserRequestUtil.h"
 #import "UserLoginRequest.h"
 #import "UserInfoRequest.h"
+#import "KidInfoReqeust.h"
+
 
 @implementation UserRequestUtil
 
@@ -31,4 +33,13 @@
     [[CDRequestManager shareInstance] createRequest:request observice:observice];
 }
 
++ (void) createGetKidInfoRequest:(NSInteger) id
+                        success:(CDRequestSuccess) successHandler
+                        failed:(CDRequestFailed) failedHandler
+                        complete:(CDRequestComplete) completeHandler{
+                            
+    CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
+    CDJsonRequest* request = [[KidInfoReqeust alloc] initWithKidId:id];
+    [[CDRequestManager shareInstance] createRequest:request observice:observice];
+}
 @end

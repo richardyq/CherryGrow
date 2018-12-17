@@ -8,7 +8,8 @@
 
 #import "HttpRequestUrlUtil.h"
 
-static NSString* const postUrl = @"http://148.70.21.73:8080/CherryDialyRecord/base.do";
+//static NSString* const postUrl = @"http://118.24.222.102:8080/CherryDialyRecord/base.do";
+static NSString* const postUrl = @"http://127.0.0.1:8080/CherryDialyRecord/base.do";
 
 @implementation HttpRequestUrlUtil
 
