@@ -43,6 +43,9 @@
 		254AF7C221C8A0E2003A4574 /* MealStatisticsDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7C121C8A0E2003A4574 /* MealStatisticsDetModel.m */; };
 		254AF7C521C8A146003A4574 /* MealStatisticsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7C421C8A146003A4574 /* MealStatisticsRequest.m */; };
 		254AF7C821C8C4AA003A4574 /* MealStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7C721C8C4AA003A4574 /* MealStatisticsTableViewCell.m */; };
+		254AF7CB21C8E49B003A4574 /* SleepStatisticsDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7CA21C8E49B003A4574 /* SleepStatisticsDetModel.m */; };
+		254AF7CE21C8E509003A4574 /* SleepStatisticsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7CD21C8E509003A4574 /* SleepStatisticsRequest.m */; };
+		254AF7D121C8ECF3003A4574 /* SleepStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7D021C8ECF3003A4574 /* SleepStatisticsTableViewCell.m */; };
 		2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C42182A92500E94CA7 /* MealSituationEditView.m */; };
 		2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */; };
 		256775A621ACD10700095AE1 /* HistoryRecordsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775A521ACD10700095AE1 /* HistoryRecordsRequest.m */; };
@@ -173,6 +176,12 @@
 		254AF7C421C8A146003A4574 /* MealStatisticsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealStatisticsRequest.m; sourceTree = "<group>"; };
 		254AF7C621C8C4AA003A4574 /* MealStatisticsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealStatisticsTableViewCell.h; sourceTree = "<group>"; };
 		254AF7C721C8C4AA003A4574 /* MealStatisticsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealStatisticsTableViewCell.m; sourceTree = "<group>"; };
+		254AF7C921C8E49B003A4574 /* SleepStatisticsDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepStatisticsDetModel.h; sourceTree = "<group>"; };
+		254AF7CA21C8E49B003A4574 /* SleepStatisticsDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepStatisticsDetModel.m; sourceTree = "<group>"; };
+		254AF7CC21C8E509003A4574 /* SleepStatisticsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepStatisticsRequest.h; sourceTree = "<group>"; };
+		254AF7CD21C8E509003A4574 /* SleepStatisticsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepStatisticsRequest.m; sourceTree = "<group>"; };
+		254AF7CF21C8ECF3003A4574 /* SleepStatisticsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepStatisticsTableViewCell.h; sourceTree = "<group>"; };
+		254AF7D021C8ECF3003A4574 /* SleepStatisticsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepStatisticsTableViewCell.m; sourceTree = "<group>"; };
 		2553F5C32182A92500E94CA7 /* MealSituationEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituationEditView.h; sourceTree = "<group>"; };
 		2553F5C42182A92500E94CA7 /* MealSituationEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationEditView.m; sourceTree = "<group>"; };
 		2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSitatusEditTableViewCell.h; sourceTree = "<group>"; };
@@ -566,6 +575,8 @@
 				25D771B421C7905F003A1E3E /* TotalStatisticsRequest.m */,
 				254AF7C321C8A146003A4574 /* MealStatisticsRequest.h */,
 				254AF7C421C8A146003A4574 /* MealStatisticsRequest.m */,
+				254AF7CC21C8E509003A4574 /* SleepStatisticsRequest.h */,
+				254AF7CD21C8E509003A4574 /* SleepStatisticsRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -617,6 +628,8 @@
 				254AF7BE21C8A077003A4574 /* StatisticsDetModel.m */,
 				254AF7C021C8A0E2003A4574 /* MealStatisticsDetModel.h */,
 				254AF7C121C8A0E2003A4574 /* MealStatisticsDetModel.m */,
+				254AF7C921C8E49B003A4574 /* SleepStatisticsDetModel.h */,
+				254AF7CA21C8E49B003A4574 /* SleepStatisticsDetModel.m */,
 			);
 			path = DateModel;
 			sourceTree = "<group>";
@@ -655,6 +668,8 @@
 				254AF7C721C8C4AA003A4574 /* MealStatisticsTableViewCell.m */,
 				254AF7B721C89706003A4574 /* SleepStatisticsViewController.h */,
 				254AF7B821C89706003A4574 /* SleepStatisticsViewController.m */,
+				254AF7CF21C8ECF3003A4574 /* SleepStatisticsTableViewCell.h */,
+				254AF7D021C8ECF3003A4574 /* SleepStatisticsTableViewCell.m */,
 				254AF7BA21C89718003A4574 /* InterestStatisticViewController.h */,
 				254AF7BB21C89718003A4574 /* InterestStatisticViewController.m */,
 			);
@@ -916,6 +931,7 @@
 				2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */,
 				254AF7B321C89120003A4574 /* StatisticsViewController.m in Sources */,
 				258A384F21AB8CA7001B3839 /* InterestSituation.m in Sources */,
+				254AF7CE21C8E509003A4574 /* SleepStatisticsRequest.m in Sources */,
 				258A386D21AC0D46001B3839 /* SleepHistoryDetModel.m in Sources */,
 				25FE9A2B21B7AF4400FDF663 /* HistoryTypeModel.m in Sources */,
 				253C555E218008DF00BC3DDB /* UserDefaults.m in Sources */,
@@ -964,6 +980,7 @@
 				256775A921ACD36800095AE1 /* HistoryRequestManager.m in Sources */,
 				2531939921A556E70014A23A /* PopViewController.m in Sources */,
 				258A385221AB9311001B3839 /* TodayInterestSituationsRequest.m in Sources */,
+				254AF7CB21C8E49B003A4574 /* SleepStatisticsDetModel.m in Sources */,
 				25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */,
 				25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */,
 				257CAC0721A78B7A0087FBAE /* SituationRecordModel.m in Sources */,
@@ -993,6 +1010,7 @@
 				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,
 				25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */,
 				258A387021AC0D7A001B3839 /* InterestHistoryDetModel.m in Sources */,
+				254AF7D121C8ECF3003A4574 /* SleepStatisticsTableViewCell.m in Sources */,
 				258A386A21AC0CBE001B3839 /* MealHistoryDetModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,4 +27,8 @@
 + (void) createMealStatisticsRequest:(CDRequestSuccess) successHandler
                               failed:(CDRequestFailed) failedHandler
                             complete:(CDRequestComplete) completeHandler;
+
++ (void) createSleepStatisticsRequest:(CDRequestSuccess) successHandler
+                               failed:(CDRequestFailed) failedHandler
+                             complete:(CDRequestComplete) completeHandler;
 @end
