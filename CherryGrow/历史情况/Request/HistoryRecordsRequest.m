@@ -30,6 +30,7 @@
         requestParam.startDate = startDate;
         requestParam.endDate = endDate;
         
+        requestParam.kidId = [UserDefaults shareInstance].kidId;
         _paramDictionary = [requestParam mj_keyValues];
     }
     return self;

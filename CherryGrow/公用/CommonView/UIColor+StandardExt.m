@@ -17,7 +17,7 @@
 }
 
 + (UIColor*) commonBackgroundColor{
-    UIColor* color = [UIColor colorWithHexString:@"FCFCFC"];
+    UIColor* color = [UIColor colorWithHexString:@"F8F8F8"];
     return color;
 }
 

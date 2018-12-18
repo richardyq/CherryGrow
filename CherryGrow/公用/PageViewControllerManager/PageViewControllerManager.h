@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseNavigationController.h"
+#import "BasePageViewController.h"
 
 @interface PageViewControllerManager : NSObject
 
@@ -16,4 +17,6 @@
 - (void) entryUserLoginPage;
 
 - (void) entryMainStartPage;
+
+- (void) createPageController:(BasePageViewController*) controller;
 @end

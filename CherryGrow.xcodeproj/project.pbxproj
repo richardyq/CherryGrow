@@ -66,6 +66,13 @@
 		25B80249218B49B600B13113 /* HttpRequestUrlUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80248218B49B600B13113 /* HttpRequestUrlUtil.m */; };
 		25D771A221C73D43003A1E3E /* KidInfoReqeust.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771A121C73D43003A1E3E /* KidInfoReqeust.m */; };
 		25D771A521C73D7F003A1E3E /* KidInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771A421C73D7F003A1E3E /* KidInfoModel.m */; };
+		25D771A921C78968003A1E3E /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771A821C78968003A1E3E /* BasePageViewController.m */; };
+		25D771AC21C78D69003A1E3E /* StatisticStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771AB21C78D69003A1E3E /* StatisticStartViewController.m */; };
+		25D771AF21C78D89003A1E3E /* StatisticsPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771AE21C78D89003A1E3E /* StatisticsPageManager.m */; };
+		25D771B221C7901D003A1E3E /* StatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771B121C7901D003A1E3E /* StatisticsModel.m */; };
+		25D771B521C7905F003A1E3E /* TotalStatisticsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771B421C7905F003A1E3E /* TotalStatisticsRequest.m */; };
+		25D771B821C791CC003A1E3E /* StatisticsStartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771B721C791CC003A1E3E /* StatisticsStartTableViewController.m */; };
+		25D771BB21C79982003A1E3E /* StatisticsStartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D771BA21C79982003A1E3E /* StatisticsStartTableViewCell.m */; };
 		25F7CFC421817733001C19A3 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F7CFC321817733001C19A3 /* UserList.plist */; };
 		25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCB21819895001C19A3 /* MainStartViewController.m */; };
 		25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */; };
@@ -204,6 +211,20 @@
 		25D771A121C73D43003A1E3E /* KidInfoReqeust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidInfoReqeust.m; sourceTree = "<group>"; };
 		25D771A321C73D7F003A1E3E /* KidInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidInfoModel.h; sourceTree = "<group>"; };
 		25D771A421C73D7F003A1E3E /* KidInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KidInfoModel.m; sourceTree = "<group>"; };
+		25D771A721C78968003A1E3E /* BasePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
+		25D771A821C78968003A1E3E /* BasePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
+		25D771AA21C78D69003A1E3E /* StatisticStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticStartViewController.h; sourceTree = "<group>"; };
+		25D771AB21C78D69003A1E3E /* StatisticStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticStartViewController.m; sourceTree = "<group>"; };
+		25D771AD21C78D89003A1E3E /* StatisticsPageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsPageManager.h; sourceTree = "<group>"; };
+		25D771AE21C78D89003A1E3E /* StatisticsPageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsPageManager.m; sourceTree = "<group>"; };
+		25D771B021C7901D003A1E3E /* StatisticsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsModel.h; sourceTree = "<group>"; };
+		25D771B121C7901D003A1E3E /* StatisticsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsModel.m; sourceTree = "<group>"; };
+		25D771B321C7905F003A1E3E /* TotalStatisticsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalStatisticsRequest.h; sourceTree = "<group>"; };
+		25D771B421C7905F003A1E3E /* TotalStatisticsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalStatisticsRequest.m; sourceTree = "<group>"; };
+		25D771B621C791CC003A1E3E /* StatisticsStartTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsStartTableViewController.h; sourceTree = "<group>"; };
+		25D771B721C791CC003A1E3E /* StatisticsStartTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsStartTableViewController.m; sourceTree = "<group>"; };
+		25D771B921C79982003A1E3E /* StatisticsStartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsStartTableViewCell.h; sourceTree = "<group>"; };
+		25D771BA21C79982003A1E3E /* StatisticsStartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsStartTableViewCell.m; sourceTree = "<group>"; };
 		25F7CFC321817733001C19A3 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
 		25F7CFCA21819895001C19A3 /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
 		25F7CFCB21819895001C19A3 /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
@@ -402,6 +423,8 @@
 				253C5548218002BB00BC3DDB /* PageViewControllerManager.m */,
 				25F7CFCD2181A2CC001C19A3 /* BaseNavigationController.h */,
 				25F7CFCE2181A2CC001C19A3 /* BaseNavigationController.m */,
+				25D771A721C78968003A1E3E /* BasePageViewController.h */,
+				25D771A821C78968003A1E3E /* BasePageViewController.m */,
 			);
 			path = PageViewControllerManager;
 			sourceTree = "<group>";
@@ -515,6 +538,8 @@
 				256775A521ACD10700095AE1 /* HistoryRecordsRequest.m */,
 				256775A721ACD36800095AE1 /* HistoryRequestManager.h */,
 				256775A821ACD36800095AE1 /* HistoryRequestManager.m */,
+				25D771B321C7905F003A1E3E /* TotalStatisticsRequest.h */,
+				25D771B421C7905F003A1E3E /* TotalStatisticsRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -522,6 +547,7 @@
 		2567759D21ACD0DC00095AE1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				25D771A621C7890B003A1E3E /* 统计 */,
 				256775AD21ACD8A200095AE1 /* HistoryStartViewController.h */,
 				256775AC21ACD8A200095AE1 /* HistoryStartViewController.m */,
 				256775AA21ACD8A200095AE1 /* HistoryTableViewController.h */,
@@ -559,6 +585,8 @@
 				258A386F21AC0D7A001B3839 /* InterestHistoryDetModel.m */,
 				25FE9A2921B7AF4400FDF663 /* HistoryTypeModel.h */,
 				25FE9A2A21B7AF4400FDF663 /* HistoryTypeModel.m */,
+				25D771B021C7901D003A1E3E /* StatisticsModel.h */,
+				25D771B121C7901D003A1E3E /* StatisticsModel.m */,
 			);
 			path = DateModel;
 			sourceTree = "<group>";
@@ -576,6 +604,21 @@
 				25D771A121C73D43003A1E3E /* KidInfoReqeust.m */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		25D771A621C7890B003A1E3E /* 统计 */ = {
+			isa = PBXGroup;
+			children = (
+				25D771AA21C78D69003A1E3E /* StatisticStartViewController.h */,
+				25D771AB21C78D69003A1E3E /* StatisticStartViewController.m */,
+				25D771AD21C78D89003A1E3E /* StatisticsPageManager.h */,
+				25D771AE21C78D89003A1E3E /* StatisticsPageManager.m */,
+				25D771B621C791CC003A1E3E /* StatisticsStartTableViewController.h */,
+				25D771B721C791CC003A1E3E /* StatisticsStartTableViewController.m */,
+				25D771B921C79982003A1E3E /* StatisticsStartTableViewCell.h */,
+				25D771BA21C79982003A1E3E /* StatisticsStartTableViewCell.m */,
+			);
+			path = "统计";
 			sourceTree = "<group>";
 		};
 		25F7CFC52181985D001C19A3 /* 主界面 */ = {
@@ -826,6 +869,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				253C5549218002BB00BC3DDB /* PageViewControllerManager.m in Sources */,
+				25D771B221C7901D003A1E3E /* StatisticsModel.m in Sources */,
+				25D771AF21C78D89003A1E3E /* StatisticsPageManager.m in Sources */,
 				2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */,
 				258A384F21AB8CA7001B3839 /* InterestSituation.m in Sources */,
 				258A386D21AC0D46001B3839 /* SleepHistoryDetModel.m in Sources */,
@@ -836,6 +881,7 @@
 				2531939F21A55AE10014A23A /* InterestCatesReqeust.m in Sources */,
 				253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */,
 				256775AE21ACD8A200095AE1 /* HistoryTableViewController.m in Sources */,
+				25D771BB21C79982003A1E3E /* StatisticsStartTableViewCell.m in Sources */,
 				25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */,
 				256AF00E21A3D70300E72143 /* TodaySleepSituationListRequest.m in Sources */,
 				25D771A521C73D7F003A1E3E /* KidInfoModel.m in Sources */,
@@ -849,12 +895,15 @@
 				256AF00821A3A0C600E72143 /* SleepSituationEditTableViewCell.m in Sources */,
 				250E454721A2649600BEEC58 /* MealSituationUtil.m in Sources */,
 				25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */,
+				25D771AC21C78D69003A1E3E /* StatisticStartViewController.m in Sources */,
 				253C555A2180070C00BC3DDB /* UserUtil.m in Sources */,
 				25B80246218B3EE500B13113 /* UserInfoRequest.m in Sources */,
 				257CAC0A21A78BF80087FBAE /* SituationDetModel.m in Sources */,
 				250E454A21A2652000BEEC58 /* SituationRequestManager.m in Sources */,
+				25D771B521C7905F003A1E3E /* TotalStatisticsRequest.m in Sources */,
 				257CAC0D21A78C820087FBAE /* SituationModel.m in Sources */,
 				253C5537217FFFC200BC3DDB /* main.m in Sources */,
+				25D771B821C791CC003A1E3E /* StatisticsStartTableViewController.m in Sources */,
 				256AF01121A3D78500E72143 /* AddSleepSituationRequest.m in Sources */,
 				25D771A221C73D43003A1E3E /* KidInfoReqeust.m in Sources */,
 				25F7CFF22181BFEB001C19A3 /* RadioGroup.m in Sources */,
@@ -883,6 +932,7 @@
 				25F7CFDB2181AD6B001C19A3 /* TagViewController.m in Sources */,
 				253C554C218002E900BC3DDB /* InitializationViewController.m in Sources */,
 				250E454D21A286A100BEEC58 /* AddMealSituationRequest.m in Sources */,
+				25D771A921C78968003A1E3E /* BasePageViewController.m in Sources */,
 				257162CA21B64CD20051F940 /* TodaySituationViewController.m in Sources */,
 				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
 				258A384C21AB8B15001B3839 /* AddInterestSituationRequest.m in Sources */,

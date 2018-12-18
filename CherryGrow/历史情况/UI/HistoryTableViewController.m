@@ -64,7 +64,7 @@
     self.tableView.estimatedSectionFooterHeight = 0;
     
     [self.tableView registerClass:[HistorySituationDetTableViewCell class] forCellReuseIdentifier:@"HistorySituationDetTableViewCell"];
-    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -243,6 +243,12 @@
     dateLabel.text = self.historyModels[section].date;
     
     return headerview;
+}
+
+- (UIView*) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView* footerview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5)];
+    footerview.backgroundColor = [UIColor commonControlBorderColor];
+    return footerview;
 }
 
 @end

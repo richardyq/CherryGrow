@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSString* startDate;
 @property (nonatomic, strong) NSString* endDate;
 
+@property (nonatomic, assign) NSInteger kidId;
+
 @end
 
 @interface HistoryRecordsRequest : CDJsonRequest

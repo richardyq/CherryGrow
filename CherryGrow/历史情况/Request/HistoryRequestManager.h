@@ -19,4 +19,8 @@
                              failed:(CDRequestFailed) failedHandler
                            complete:(CDRequestComplete) completeHandler;
 
++ (void) createTotalStatisticsRequest:(NSInteger) type
+                              success:(CDRequestSuccess) successHandler
+                               failed:(CDRequestFailed) failedHandler
+                             complete:(CDRequestComplete) completeHandler;
 @end
