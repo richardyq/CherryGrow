@@ -10,6 +10,7 @@
 #import "HistoryRecordsRequest.h"
 #import "DailySituationModel.h"
 #import "TotalStatisticsRequest.h"
+#import "MealStatisticsRequest.h"
 
 @implementation HistoryRequestManager
 
@@ -34,6 +35,14 @@
     CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
     
     CDJsonRequest* request = [[TotalStatisticsRequest alloc] initWithType:type];
+    [[CDRequestManager shareInstance] createRequest:request observice:observice];
+}
+
++ (void) createMealStatisticsRequest:(CDRequestSuccess) successHandler
+                              failed:(CDRequestFailed) failedHandler
+                            complete:(CDRequestComplete) completeHandler{
+    CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
+    CDJsonRequest* request = [[MealStatisticsRequest alloc] init];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];
 }
 @end

@@ -35,6 +35,14 @@
 		253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556B218010B900BC3DDB /* UIView+BoarderExt.m */; };
 		253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556E218011B000BC3DDB /* UIColor+StandardExt.m */; };
 		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
+		254AF7B321C89120003A4574 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7B221C89120003A4574 /* StatisticsViewController.m */; };
+		254AF7B621C896DA003A4574 /* MealStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7B521C896DA003A4574 /* MealStatisticsViewController.m */; };
+		254AF7B921C89706003A4574 /* SleepStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7B821C89706003A4574 /* SleepStatisticsViewController.m */; };
+		254AF7BC21C89718003A4574 /* InterestStatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7BB21C89718003A4574 /* InterestStatisticViewController.m */; };
+		254AF7BF21C8A077003A4574 /* StatisticsDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7BE21C8A077003A4574 /* StatisticsDetModel.m */; };
+		254AF7C221C8A0E2003A4574 /* MealStatisticsDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7C121C8A0E2003A4574 /* MealStatisticsDetModel.m */; };
+		254AF7C521C8A146003A4574 /* MealStatisticsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7C421C8A146003A4574 /* MealStatisticsRequest.m */; };
+		254AF7C821C8C4AA003A4574 /* MealStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7C721C8C4AA003A4574 /* MealStatisticsTableViewCell.m */; };
 		2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C42182A92500E94CA7 /* MealSituationEditView.m */; };
 		2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F5C72182B62C00E94CA7 /* MealSitatusEditTableViewCell.m */; };
 		256775A621ACD10700095AE1 /* HistoryRecordsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 256775A521ACD10700095AE1 /* HistoryRecordsRequest.m */; };
@@ -149,6 +157,22 @@
 		253C556E218011B000BC3DDB /* UIColor+StandardExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StandardExt.m"; sourceTree = "<group>"; };
 		253C55712180128000BC3DDB /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
 		253C55722180128000BC3DDB /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		254AF7B121C89120003A4574 /* StatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		254AF7B221C89120003A4574 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		254AF7B421C896DA003A4574 /* MealStatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealStatisticsViewController.h; sourceTree = "<group>"; };
+		254AF7B521C896DA003A4574 /* MealStatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealStatisticsViewController.m; sourceTree = "<group>"; };
+		254AF7B721C89706003A4574 /* SleepStatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepStatisticsViewController.h; sourceTree = "<group>"; };
+		254AF7B821C89706003A4574 /* SleepStatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepStatisticsViewController.m; sourceTree = "<group>"; };
+		254AF7BA21C89718003A4574 /* InterestStatisticViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterestStatisticViewController.h; sourceTree = "<group>"; };
+		254AF7BB21C89718003A4574 /* InterestStatisticViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestStatisticViewController.m; sourceTree = "<group>"; };
+		254AF7BD21C8A077003A4574 /* StatisticsDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsDetModel.h; sourceTree = "<group>"; };
+		254AF7BE21C8A077003A4574 /* StatisticsDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsDetModel.m; sourceTree = "<group>"; };
+		254AF7C021C8A0E2003A4574 /* MealStatisticsDetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealStatisticsDetModel.h; sourceTree = "<group>"; };
+		254AF7C121C8A0E2003A4574 /* MealStatisticsDetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealStatisticsDetModel.m; sourceTree = "<group>"; };
+		254AF7C321C8A146003A4574 /* MealStatisticsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealStatisticsRequest.h; sourceTree = "<group>"; };
+		254AF7C421C8A146003A4574 /* MealStatisticsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealStatisticsRequest.m; sourceTree = "<group>"; };
+		254AF7C621C8C4AA003A4574 /* MealStatisticsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealStatisticsTableViewCell.h; sourceTree = "<group>"; };
+		254AF7C721C8C4AA003A4574 /* MealStatisticsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealStatisticsTableViewCell.m; sourceTree = "<group>"; };
 		2553F5C32182A92500E94CA7 /* MealSituationEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSituationEditView.h; sourceTree = "<group>"; };
 		2553F5C42182A92500E94CA7 /* MealSituationEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSituationEditView.m; sourceTree = "<group>"; };
 		2553F5C62182B62C00E94CA7 /* MealSitatusEditTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSitatusEditTableViewCell.h; sourceTree = "<group>"; };
@@ -540,6 +564,8 @@
 				256775A821ACD36800095AE1 /* HistoryRequestManager.m */,
 				25D771B321C7905F003A1E3E /* TotalStatisticsRequest.h */,
 				25D771B421C7905F003A1E3E /* TotalStatisticsRequest.m */,
+				254AF7C321C8A146003A4574 /* MealStatisticsRequest.h */,
+				254AF7C421C8A146003A4574 /* MealStatisticsRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -587,6 +613,10 @@
 				25FE9A2A21B7AF4400FDF663 /* HistoryTypeModel.m */,
 				25D771B021C7901D003A1E3E /* StatisticsModel.h */,
 				25D771B121C7901D003A1E3E /* StatisticsModel.m */,
+				254AF7BD21C8A077003A4574 /* StatisticsDetModel.h */,
+				254AF7BE21C8A077003A4574 /* StatisticsDetModel.m */,
+				254AF7C021C8A0E2003A4574 /* MealStatisticsDetModel.h */,
+				254AF7C121C8A0E2003A4574 /* MealStatisticsDetModel.m */,
 			);
 			path = DateModel;
 			sourceTree = "<group>";
@@ -617,6 +647,16 @@
 				25D771B721C791CC003A1E3E /* StatisticsStartTableViewController.m */,
 				25D771B921C79982003A1E3E /* StatisticsStartTableViewCell.h */,
 				25D771BA21C79982003A1E3E /* StatisticsStartTableViewCell.m */,
+				254AF7B121C89120003A4574 /* StatisticsViewController.h */,
+				254AF7B221C89120003A4574 /* StatisticsViewController.m */,
+				254AF7B421C896DA003A4574 /* MealStatisticsViewController.h */,
+				254AF7B521C896DA003A4574 /* MealStatisticsViewController.m */,
+				254AF7C621C8C4AA003A4574 /* MealStatisticsTableViewCell.h */,
+				254AF7C721C8C4AA003A4574 /* MealStatisticsTableViewCell.m */,
+				254AF7B721C89706003A4574 /* SleepStatisticsViewController.h */,
+				254AF7B821C89706003A4574 /* SleepStatisticsViewController.m */,
+				254AF7BA21C89718003A4574 /* InterestStatisticViewController.h */,
+				254AF7BB21C89718003A4574 /* InterestStatisticViewController.m */,
 			);
 			path = "统计";
 			sourceTree = "<group>";
@@ -870,8 +910,11 @@
 			files = (
 				253C5549218002BB00BC3DDB /* PageViewControllerManager.m in Sources */,
 				25D771B221C7901D003A1E3E /* StatisticsModel.m in Sources */,
+				254AF7B921C89706003A4574 /* SleepStatisticsViewController.m in Sources */,
+				254AF7C221C8A0E2003A4574 /* MealStatisticsDetModel.m in Sources */,
 				25D771AF21C78D89003A1E3E /* StatisticsPageManager.m in Sources */,
 				2553F5C52182A92500E94CA7 /* MealSituationEditView.m in Sources */,
+				254AF7B321C89120003A4574 /* StatisticsViewController.m in Sources */,
 				258A384F21AB8CA7001B3839 /* InterestSituation.m in Sources */,
 				258A386D21AC0D46001B3839 /* SleepHistoryDetModel.m in Sources */,
 				25FE9A2B21B7AF4400FDF663 /* HistoryTypeModel.m in Sources */,
@@ -883,6 +926,7 @@
 				256775AE21ACD8A200095AE1 /* HistoryTableViewController.m in Sources */,
 				25D771BB21C79982003A1E3E /* StatisticsStartTableViewCell.m in Sources */,
 				25F7CFCC21819896001C19A3 /* MainStartViewController.m in Sources */,
+				254AF7BF21C8A077003A4574 /* StatisticsDetModel.m in Sources */,
 				256AF00E21A3D70300E72143 /* TodaySleepSituationListRequest.m in Sources */,
 				25D771A521C73D7F003A1E3E /* KidInfoModel.m in Sources */,
 				253C55662180104300BC3DDB /* UIView+SubViewExt.m in Sources */,
@@ -933,15 +977,19 @@
 				253C554C218002E900BC3DDB /* InitializationViewController.m in Sources */,
 				250E454D21A286A100BEEC58 /* AddMealSituationRequest.m in Sources */,
 				25D771A921C78968003A1E3E /* BasePageViewController.m in Sources */,
+				254AF7B621C896DA003A4574 /* MealStatisticsViewController.m in Sources */,
 				257162CA21B64CD20051F940 /* TodaySituationViewController.m in Sources */,
 				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
 				258A384C21AB8B15001B3839 /* AddInterestSituationRequest.m in Sources */,
 				256775AF21ACD8A200095AE1 /* HistoryStartViewController.m in Sources */,
 				258A384921AB7FF1001B3839 /* InterestSituationSelectViewController.m in Sources */,
+				254AF7C821C8C4AA003A4574 /* MealStatisticsTableViewCell.m in Sources */,
 				253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */,
 				250E454321A262FD00BEEC58 /* TodayMealSituationListRequest.m in Sources */,
+				254AF7C521C8A146003A4574 /* MealStatisticsRequest.m in Sources */,
 				25F7CFE52181AF1B001C19A3 /* SleepSituationStartViewController.m in Sources */,
 				25F7CFDA2181AD6B001C19A3 /* TagView.m in Sources */,
+				254AF7BC21C89718003A4574 /* InterestStatisticViewController.m in Sources */,
 				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,
 				25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */,
 				258A387021AC0D7A001B3839 /* InterestHistoryDetModel.m in Sources */,

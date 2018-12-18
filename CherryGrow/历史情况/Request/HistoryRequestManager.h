@@ -23,4 +23,8 @@
                               success:(CDRequestSuccess) successHandler
                                failed:(CDRequestFailed) failedHandler
                              complete:(CDRequestComplete) completeHandler;
+
++ (void) createMealStatisticsRequest:(CDRequestSuccess) successHandler
+                              failed:(CDRequestFailed) failedHandler
+                            complete:(CDRequestComplete) completeHandler;
 @end

@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class StatisticsModel;
+
 @interface StatisticsPageManager : NSObject
 
 + (void) entryStaticsticStartPage;
+
++ (void) entryMealStatisticsPage:(StatisticsModel*) statisticsModel;
++ (void) entrySleepStatisticsPage:(StatisticsModel*) statisticsModel;
++ (void) entryInterestStatisticsPage:(StatisticsModel*) statisticsModel;
 
 @end

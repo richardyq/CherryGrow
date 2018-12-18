@@ -10,6 +10,7 @@
 #import "HistoryRequestManager.h"
 #import "StatisticsModel.h"
 #import "StatisticsStartTableViewCell.h"
+#import "StatisticsPageManager.h"
 
 @interface StatisticsStartTableViewController ()
 
@@ -77,6 +78,25 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.5;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:{
+            [StatisticsPageManager entryMealStatisticsPage:self.mealStatisticModel];
+            break;
+        }
+        case 1:{
+            [StatisticsPageManager entrySleepStatisticsPage:self.sleepStatisticModel];
+            break;
+        }
+        case 2:{
+            [StatisticsPageManager entryInterestStatisticsPage:self.interestStatisticModel];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (void) startLoadMealStatistic{
