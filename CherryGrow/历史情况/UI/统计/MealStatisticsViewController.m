@@ -47,11 +47,17 @@
 - (void) viewDidLoad{
     [super viewDidLoad];
     
-    [self startLoadMealStatistics];
+    //[self startLoadMealStatistics];
     [self.tableView registerClass:[MealStatisticsTableViewCell class] forCellReuseIdentifier:@"MealStatisticsTableViewCell"];
     
     [self.tableView setBackgroundColor:[UIColor commonBackgroundColor]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startLoadMealStatistics)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    [self.tableView.mj_header beginRefreshing];
+    
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -83,6 +89,7 @@
             return ;
         }
         __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.tableView.mj_header endRefreshing];
         if (errorCode == 0) {
             [strongSelf.tableView reloadData];
         }

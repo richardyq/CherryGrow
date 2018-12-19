@@ -46,10 +46,14 @@
 
 - (void) viewDidLoad{
     [super viewDidLoad];
-    [self startLoadSleepStatistics];
+    //[self startLoadSleepStatistics];
     [self.tableView setBackgroundColor:[UIColor commonBackgroundColor]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView registerClass:[SleepStatisticsTableViewCell class] forCellReuseIdentifier:@"SleepStatisticsTableViewCell"];
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startLoadSleepStatistics)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void) startLoadSleepStatistics{
@@ -67,6 +71,7 @@
             return ;
         }
         __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.tableView.mj_header endRefreshing];
         if (errorCode == 0) {
             [strongSelf.tableView reloadData];
         }

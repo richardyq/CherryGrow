@@ -31,4 +31,8 @@
 + (void) createSleepStatisticsRequest:(CDRequestSuccess) successHandler
                                failed:(CDRequestFailed) failedHandler
                              complete:(CDRequestComplete) completeHandler;
+
++ (void) createInterestStatisticsRequest:(CDRequestSuccess) successHandler
+                                  failed:(CDRequestFailed) failedHandler
+                                complete:(CDRequestComplete) completeHandler;
 @end
