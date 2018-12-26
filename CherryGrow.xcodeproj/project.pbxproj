@@ -74,6 +74,9 @@
 		25A54C0E21C9DD1B00E8DE8C /* InterestStatisticsDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A54C0D21C9DD1B00E8DE8C /* InterestStatisticsDetModel.m */; };
 		25A54C1121C9E5DE00E8DE8C /* InterestStatisticsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A54C1021C9E5DE00E8DE8C /* InterestStatisticsRequest.m */; };
 		25A54C1421C9ECC600E8DE8C /* InterestStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A54C1321C9ECC600E8DE8C /* InterestStatisticsTableViewCell.m */; };
+		25A54C1921CA18D500E8DE8C /* PersonStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A54C1821CA18D500E8DE8C /* PersonStartViewController.m */; };
+		25A54C1C21CA190500E8DE8C /* PersonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A54C1B21CA190500E8DE8C /* PersonHeaderView.m */; };
+		25A54C1F21CA255B00E8DE8C /* PersonKidInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A54C1E21CA255B00E8DE8C /* PersonKidInfoView.m */; };
 		25B80240218AFBD200B13113 /* UserLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B8023F218AFBD200B13113 /* UserLoginRequest.m */; };
 		25B80243218AFC9F00B13113 /* UserRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80242218AFC9F00B13113 /* UserRequestUtil.m */; };
 		25B80246218B3EE500B13113 /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B80245218B3EE500B13113 /* UserInfoRequest.m */; };
@@ -241,6 +244,12 @@
 		25A54C1021C9E5DE00E8DE8C /* InterestStatisticsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestStatisticsRequest.m; sourceTree = "<group>"; };
 		25A54C1221C9ECC600E8DE8C /* InterestStatisticsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterestStatisticsTableViewCell.h; sourceTree = "<group>"; };
 		25A54C1321C9ECC600E8DE8C /* InterestStatisticsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestStatisticsTableViewCell.m; sourceTree = "<group>"; };
+		25A54C1721CA18D500E8DE8C /* PersonStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonStartViewController.h; sourceTree = "<group>"; };
+		25A54C1821CA18D500E8DE8C /* PersonStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonStartViewController.m; sourceTree = "<group>"; };
+		25A54C1A21CA190500E8DE8C /* PersonHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonHeaderView.h; sourceTree = "<group>"; };
+		25A54C1B21CA190500E8DE8C /* PersonHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonHeaderView.m; sourceTree = "<group>"; };
+		25A54C1D21CA255A00E8DE8C /* PersonKidInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonKidInfoView.h; sourceTree = "<group>"; };
+		25A54C1E21CA255B00E8DE8C /* PersonKidInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonKidInfoView.m; sourceTree = "<group>"; };
 		25B8023E218AFBD200B13113 /* UserLoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLoginRequest.h; sourceTree = "<group>"; };
 		25B8023F218AFBD200B13113 /* UserLoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginRequest.m; sourceTree = "<group>"; };
 		25B80241218AFC9F00B13113 /* UserRequestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequestUtil.h; sourceTree = "<group>"; };
@@ -408,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				258A385621AC092C001B3839 /* 历史情况 */,
+				25A54C1521CA18BD00E8DE8C /* 个人空间 */,
 				25F7CFD02181AB09001C19A3 /* 今日表现 */,
 				25F7CFC52181985D001C19A3 /* 主界面 */,
 				253C55512180064C00BC3DDB /* 用户 */,
@@ -645,6 +655,27 @@
 				25A54C0D21C9DD1B00E8DE8C /* InterestStatisticsDetModel.m */,
 			);
 			path = DateModel;
+			sourceTree = "<group>";
+		};
+		25A54C1521CA18BD00E8DE8C /* 个人空间 */ = {
+			isa = PBXGroup;
+			children = (
+				25A54C1621CA18BD00E8DE8C /* UI */,
+			);
+			path = "个人空间";
+			sourceTree = "<group>";
+		};
+		25A54C1621CA18BD00E8DE8C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				25A54C1721CA18D500E8DE8C /* PersonStartViewController.h */,
+				25A54C1821CA18D500E8DE8C /* PersonStartViewController.m */,
+				25A54C1A21CA190500E8DE8C /* PersonHeaderView.h */,
+				25A54C1B21CA190500E8DE8C /* PersonHeaderView.m */,
+				25A54C1D21CA255A00E8DE8C /* PersonKidInfoView.h */,
+				25A54C1E21CA255B00E8DE8C /* PersonKidInfoView.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		25B8023D218AFB8700B13113 /* Request */ = {
@@ -948,6 +979,7 @@
 				25A54C1121C9E5DE00E8DE8C /* InterestStatisticsRequest.m in Sources */,
 				258A384F21AB8CA7001B3839 /* InterestSituation.m in Sources */,
 				254AF7CE21C8E509003A4574 /* SleepStatisticsRequest.m in Sources */,
+				25A54C1C21CA190500E8DE8C /* PersonHeaderView.m in Sources */,
 				258A386D21AC0D46001B3839 /* SleepHistoryDetModel.m in Sources */,
 				25FE9A2B21B7AF4400FDF663 /* HistoryTypeModel.m in Sources */,
 				253C555E218008DF00BC3DDB /* UserDefaults.m in Sources */,
@@ -1025,8 +1057,10 @@
 				25F7CFE52181AF1B001C19A3 /* SleepSituationStartViewController.m in Sources */,
 				25F7CFDA2181AD6B001C19A3 /* TagView.m in Sources */,
 				254AF7BC21C89718003A4574 /* InterestStatisticViewController.m in Sources */,
+				25A54C1F21CA255B00E8DE8C /* PersonKidInfoView.m in Sources */,
 				253C55432180015D00BC3DDB /* NSObject+RootControllerExt.m in Sources */,
 				25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */,
+				25A54C1921CA18D500E8DE8C /* PersonStartViewController.m in Sources */,
 				258A387021AC0D7A001B3839 /* InterestHistoryDetModel.m in Sources */,
 				254AF7D121C8ECF3003A4574 /* SleepStatisticsTableViewCell.m in Sources */,
 				258A386A21AC0CBE001B3839 /* MealHistoryDetModel.m in Sources */,

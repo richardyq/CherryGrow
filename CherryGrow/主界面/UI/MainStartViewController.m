@@ -9,6 +9,7 @@
 #import "MainStartViewController.h"
 #import "TodayStartViewController.h"
 #import "HistoryStartViewController.h"
+#import "PersonStartViewController.h"
 
 @interface MainStartViewController ()
 
@@ -44,7 +45,7 @@
     historyNaviController.tabBarItem.title = @"历史";
     historyNaviController.navigationBar.translucent = NO;
     //我的
-    UIViewController* personController = [[UIViewController alloc] init];
+    UIViewController* personController = [[PersonStartViewController alloc] init];
     UINavigationController* personNaviController = [[BaseNavigationController alloc] initWithRootViewController:personController];
     personController.navigationItem.title = @"我的";
     personNaviController.tabBarItem.title = @"我";
