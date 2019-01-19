@@ -15,6 +15,8 @@
 #import "InitializationUtil.h"
 #import "UserUtil.h"
 
+#import "UserLoginViewControllerManager.h"
+
 @interface UserLoginViewController ()
 {
     InitializationUtil* util;
@@ -24,6 +26,7 @@
 @property (nonatomic, strong) UITextField* accountTextField;
 @property (nonatomic, strong) UITextField* passwordTextField;
 @property (nonatomic, strong) UIButton* loginButton;
+@property (nonatomic, strong) UIButton* registerButton;
 
 @property (nonatomic, readonly) NSString* accountString;
 @property (nonatomic, readonly) NSString* passwordString;
@@ -45,7 +48,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor commonBackgroundColor]];
-    UserAccountModel* account = [[UserDefaults shareInstance] loginedUserAccount];
+    UserAccountModel* account = [[UserDefaults shareInstance] savedAccountModel];
     if (account) {
         self.accountTextField.text = account.account;
         self.passwordTextField.text = account.password;
@@ -86,6 +89,11 @@
         make.centerX.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(200, 45));
         make.top.equalTo(self.passwordTextField.mas_bottom).offset(22);
+    }];
+    
+    [self.registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.loginButton.mas_bottom).offset(13);
     }];
 }
 
@@ -145,6 +153,18 @@
     return _loginButton;
 }
 
+- (UIButton*) registerButton{
+    if (!_registerButton) {
+        _registerButton = [self addButton:UIButtonTypeCustom];
+        [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
+        [_registerButton setTitleColor:[UIColor mainThemeColor] forState:UIControlStateNormal];
+        _registerButton.titleLabel.font = [UIFont systemFontOfSize:13];
+        
+        [_registerButton addTarget:self action:@selector(registerButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _registerButton;
+}
+
 - (NSString*) accountString{
     return self.accountTextField.text;
 }
@@ -192,6 +212,10 @@
     [self saveLoginedUserAccount];
     [[InitializationUtil new] startInitialize];
     */
+}
+
+- (void) registerButtonClicked:(id) sender{
+    [UserLoginViewControllerManager entryRegisterPage];
 }
 
 - (void) saveLoginedUserAccount{

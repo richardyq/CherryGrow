@@ -26,4 +26,8 @@
                         failed:(CDRequestFailed) failedHandler
                         complete:(CDRequestComplete) completeHandler;
 
++ (void) createValidAccountRequest:(NSString*) account
+                           success:(CDRequestSuccess) successHandler
+                            failed:(CDRequestFailed) failedHandler
+                          complete:(CDRequestComplete) completeHandler;
 @end

@@ -40,7 +40,7 @@
         
         radioButton.selected = (idx == _selectedIndex);
         
-        [radioButton addTarget:self action:@selector(radioButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [radioButton addTarget:self action:@selector(radioButtonClicked:) forControlEvents:UIControlEventAllTouchEvents];
     }];
     
     return  [NSArray<RadioButton*> arrayWithArray:buttons];

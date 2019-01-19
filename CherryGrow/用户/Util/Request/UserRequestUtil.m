@@ -10,7 +10,7 @@
 #import "UserLoginRequest.h"
 #import "UserInfoRequest.h"
 #import "KidInfoReqeust.h"
-
+#import "ValidLoginAccountRequest.h"
 
 @implementation UserRequestUtil
 
@@ -40,6 +40,15 @@
                             
     CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
     CDJsonRequest* request = [[KidInfoReqeust alloc] initWithKidId:id];
+    [[CDRequestManager shareInstance] createRequest:request observice:observice];
+}
+
++ (void) createValidAccountRequest:(NSString*) account
+                           success:(CDRequestSuccess) successHandler
+                            failed:(CDRequestFailed) failedHandler
+                          complete:(CDRequestComplete) completeHandler{
+    CDRequestObservice* observice = [[CDRequestObservice alloc] initWithSuccess:successHandler failed:failedHandler complete:completeHandler];
+    CDJsonRequest* request = [[ValidLoginAccountRequest alloc] initWithAccount:account];
     [[CDRequestManager shareInstance] createRequest:request observice:observice];
 }
 @end

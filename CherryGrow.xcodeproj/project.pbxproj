@@ -35,6 +35,12 @@
 		253C556C218010B900BC3DDB /* UIView+BoarderExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556B218010B900BC3DDB /* UIView+BoarderExt.m */; };
 		253C556F218011B000BC3DDB /* UIColor+StandardExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C556E218011B000BC3DDB /* UIColor+StandardExt.m */; };
 		253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C55722180128000BC3DDB /* UserLoginViewController.m */; };
+		2548448521D31FBA005B1FED /* RegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548448421D31FBA005B1FED /* RegisterAccountViewController.m */; };
+		2548448821D32041005B1FED /* UserLoginViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548448721D32041005B1FED /* UserLoginViewControllerManager.m */; };
+		2548448B21D323FA005B1FED /* CommonInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548448A21D323FA005B1FED /* CommonInputTextView.m */; };
+		2548448E21D34EB0005B1FED /* ValidLoginAccountRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548448D21D34EAF005B1FED /* ValidLoginAccountRequest.m */; };
+		2548449121D35341005B1FED /* RegisterUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548449021D35341005B1FED /* RegisterUserInfoViewController.m */; };
+		2548449421D36614005B1FED /* RegisterKidInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2548449321D36614005B1FED /* RegisterKidInfoViewController.m */; };
 		254AF7B321C89120003A4574 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7B221C89120003A4574 /* StatisticsViewController.m */; };
 		254AF7B621C896DA003A4574 /* MealStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7B521C896DA003A4574 /* MealStatisticsViewController.m */; };
 		254AF7B921C89706003A4574 /* SleepStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254AF7B821C89706003A4574 /* SleepStatisticsViewController.m */; };
@@ -166,6 +172,18 @@
 		253C556E218011B000BC3DDB /* UIColor+StandardExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StandardExt.m"; sourceTree = "<group>"; };
 		253C55712180128000BC3DDB /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
 		253C55722180128000BC3DDB /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		2548448321D31FBA005B1FED /* RegisterAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterAccountViewController.h; sourceTree = "<group>"; };
+		2548448421D31FBA005B1FED /* RegisterAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterAccountViewController.m; sourceTree = "<group>"; };
+		2548448621D32041005B1FED /* UserLoginViewControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLoginViewControllerManager.h; sourceTree = "<group>"; };
+		2548448721D32041005B1FED /* UserLoginViewControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewControllerManager.m; sourceTree = "<group>"; };
+		2548448921D323FA005B1FED /* CommonInputTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonInputTextView.h; sourceTree = "<group>"; };
+		2548448A21D323FA005B1FED /* CommonInputTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonInputTextView.m; sourceTree = "<group>"; };
+		2548448C21D34EAF005B1FED /* ValidLoginAccountRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidLoginAccountRequest.h; sourceTree = "<group>"; };
+		2548448D21D34EAF005B1FED /* ValidLoginAccountRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidLoginAccountRequest.m; sourceTree = "<group>"; };
+		2548448F21D35341005B1FED /* RegisterUserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterUserInfoViewController.h; sourceTree = "<group>"; };
+		2548449021D35341005B1FED /* RegisterUserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterUserInfoViewController.m; sourceTree = "<group>"; };
+		2548449221D36614005B1FED /* RegisterKidInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterKidInfoViewController.h; sourceTree = "<group>"; };
+		2548449321D36614005B1FED /* RegisterKidInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterKidInfoViewController.m; sourceTree = "<group>"; };
 		254AF7B121C89120003A4574 /* StatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		254AF7B221C89120003A4574 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		254AF7B421C896DA003A4574 /* MealStatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealStatisticsViewController.h; sourceTree = "<group>"; };
@@ -570,6 +588,8 @@
 				2531939821A556E70014A23A /* PopViewController.m */,
 				25FE9A2121B772F200FDF663 /* DatePickerViewController.h */,
 				25FE9A2221B772F200FDF663 /* DatePickerViewController.m */,
+				2548448921D323FA005B1FED /* CommonInputTextView.h */,
+				2548448A21D323FA005B1FED /* CommonInputTextView.m */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -579,6 +599,14 @@
 			children = (
 				253C55712180128000BC3DDB /* UserLoginViewController.h */,
 				253C55722180128000BC3DDB /* UserLoginViewController.m */,
+				2548448321D31FBA005B1FED /* RegisterAccountViewController.h */,
+				2548448421D31FBA005B1FED /* RegisterAccountViewController.m */,
+				2548448F21D35341005B1FED /* RegisterUserInfoViewController.h */,
+				2548449021D35341005B1FED /* RegisterUserInfoViewController.m */,
+				2548449221D36614005B1FED /* RegisterKidInfoViewController.h */,
+				2548449321D36614005B1FED /* RegisterKidInfoViewController.m */,
+				2548448621D32041005B1FED /* UserLoginViewControllerManager.h */,
+				2548448721D32041005B1FED /* UserLoginViewControllerManager.m */,
 			);
 			path = "登录";
 			sourceTree = "<group>";
@@ -689,6 +717,8 @@
 				25B80245218B3EE500B13113 /* UserInfoRequest.m */,
 				25D771A021C73D43003A1E3E /* KidInfoReqeust.h */,
 				25D771A121C73D43003A1E3E /* KidInfoReqeust.m */,
+				2548448C21D34EAF005B1FED /* ValidLoginAccountRequest.h */,
+				2548448D21D34EAF005B1FED /* ValidLoginAccountRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -997,12 +1027,15 @@
 				258A386421AC0C41001B3839 /* DailySituationModel.m in Sources */,
 				256AF00B21A3AFDA00E72143 /* SleepSituation.m in Sources */,
 				25F7CFCF2181A2CC001C19A3 /* BaseNavigationController.m in Sources */,
+				2548449121D35341005B1FED /* RegisterUserInfoViewController.m in Sources */,
 				256775B221ACE00400095AE1 /* HistorySituationDetTableViewCell.m in Sources */,
 				2553F5C82182B62C00E94CA7 /* MealSitatusEditTableViewCell.m in Sources */,
 				25FAA35E2180248E006C8588 /* UserModel.m in Sources */,
 				256AF00821A3A0C600E72143 /* SleepSituationEditTableViewCell.m in Sources */,
+				2548448821D32041005B1FED /* UserLoginViewControllerManager.m in Sources */,
 				250E454721A2649600BEEC58 /* MealSituationUtil.m in Sources */,
 				25F7CFEB2181AF66001C19A3 /* GeneralSituationStartCommonViewController.m in Sources */,
+				2548449421D36614005B1FED /* RegisterKidInfoViewController.m in Sources */,
 				25D771AC21C78D69003A1E3E /* StatisticStartViewController.m in Sources */,
 				253C555A2180070C00BC3DDB /* UserUtil.m in Sources */,
 				25A54C0E21C9DD1B00E8DE8C /* InterestStatisticsDetModel.m in Sources */,
@@ -1044,12 +1077,14 @@
 				250E454D21A286A100BEEC58 /* AddMealSituationRequest.m in Sources */,
 				25D771A921C78968003A1E3E /* BasePageViewController.m in Sources */,
 				254AF7B621C896DA003A4574 /* MealStatisticsViewController.m in Sources */,
+				2548448521D31FBA005B1FED /* RegisterAccountViewController.m in Sources */,
 				257162CA21B64CD20051F940 /* TodaySituationViewController.m in Sources */,
 				253C55732180128000BC3DDB /* UserLoginViewController.m in Sources */,
 				25A54C1421C9ECC600E8DE8C /* InterestStatisticsTableViewCell.m in Sources */,
 				258A384C21AB8B15001B3839 /* AddInterestSituationRequest.m in Sources */,
 				256775AF21ACD8A200095AE1 /* HistoryStartViewController.m in Sources */,
 				258A384921AB7FF1001B3839 /* InterestSituationSelectViewController.m in Sources */,
+				2548448E21D34EB0005B1FED /* ValidLoginAccountRequest.m in Sources */,
 				254AF7C821C8C4AA003A4574 /* MealStatisticsTableViewCell.m in Sources */,
 				253C55692180108500BC3DDB /* UIViewController+SubViewExt.m in Sources */,
 				250E454321A262FD00BEEC58 /* TodayMealSituationListRequest.m in Sources */,
@@ -1062,6 +1097,7 @@
 				25F7CFD42181AB3C001C19A3 /* TodayStartViewController.m in Sources */,
 				25A54C1921CA18D500E8DE8C /* PersonStartViewController.m in Sources */,
 				258A387021AC0D7A001B3839 /* InterestHistoryDetModel.m in Sources */,
+				2548448B21D323FA005B1FED /* CommonInputTextView.m in Sources */,
 				254AF7D121C8ECF3003A4574 /* SleepStatisticsTableViewCell.m in Sources */,
 				258A386A21AC0CBE001B3839 /* MealHistoryDetModel.m in Sources */,
 			);

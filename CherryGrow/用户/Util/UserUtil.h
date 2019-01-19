@@ -25,4 +25,10 @@
 + (void) startGetKidInfo:(NSInteger) kidId
                  success:(CherrySuccessHandler) success
                   failed:(CherryFailedHandler) fail;
+
++ (void) userLogout;
+
++ (void) startValidLoginAccount:(NSString*) account
+                        success:(CherrySuccessHandler) success
+                         failed:(CherryFailedHandler) fail;
 @end

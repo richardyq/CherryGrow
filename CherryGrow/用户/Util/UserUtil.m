@@ -65,16 +65,16 @@
     [UserRequestUtil createGetUserInfoRequest:userId success:^(id result) {
         userInfo = (UserModel*) result;
         
-        if(success){
-            success(userInfo);
-        }
+        
     } failed:^(NSInteger errorCode, NSString *message) {
         [NSObject showAlert:message];
         if (fail) {
             fail(errorCode, message);
         }
     } complete:^(NSInteger errorCode) {
-        
+        if(success && errorCode == 0){
+            success(userInfo);
+        }
     }];
 }
 
@@ -84,16 +84,38 @@
     __block KidInfoModel* kidInfoModel = nil;
     [UserRequestUtil createGetKidInfoRequest:kidId success:^(id result) {
         kidInfoModel = (KidInfoModel*) result;
-        if(success){
-            success(kidInfoModel);
-        }
+        
     } failed:^(NSInteger errorCode, NSString *message) {
         [NSObject showAlert:message];
         if (fail) {
             fail(errorCode, message);
         }
     } complete:^(NSInteger errorCode) {
-        
+        if(success && errorCode == 0){
+            success(kidInfoModel);
+        }
+    }];
+}
+
++ (void) userLogout{
+    UserDefaults* defaults = [UserDefaults shareInstance];
+    [defaults setKidInfoModel:nil];
+    [defaults setLoginedUserAccount:nil];
+    [defaults setLoginedUserModel:nil];
+}
+
++ (void) startValidLoginAccount:(NSString*) account
+                        success:(CherrySuccessHandler) success
+                         failed:(CherryFailedHandler) fail{
+    [UserRequestUtil createValidAccountRequest:account success:nil failed:^(NSInteger errorCode, NSString *message) {
+        [NSObject showAlert:message];
+        if (fail) {
+            fail(errorCode, message);
+        }
+    } complete:^(NSInteger errorCode) {
+        if (success && errorCode == 0) {
+            success(nil);
+        }
     }];
 }
 @end

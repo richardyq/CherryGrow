@@ -23,6 +23,7 @@
 
 #import "PageViewControllerManager.h"
 #import "DatePickerViewController.h"
+#import "CommonInputTextView.h"
 
 typedef void(^CherrySuccessHandler)(id result);
 typedef void(^CherryFailedHandler)(NSInteger errCode, NSString* errMsg);

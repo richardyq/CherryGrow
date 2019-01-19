@@ -13,6 +13,9 @@
 
 static UserDefaults* shareInstance = nil;
 
+static NSString* savedAccountKey = @"savedAccount";
+static NSString* savedPasswordKey = @"savedPassword";
+
 static NSString* loginedUserAccountKey = @"loginedUserAccount";
 static NSString* loginedUserKey = @"loginedUser";
 static NSString* kidInfoModelKey = @"kidInfoModel";
@@ -52,6 +55,16 @@ static NSString* kidInfoModelKey = @"kidInfoModel";
     return nil;
 }
 
+- (UserAccountModel*) savedAccountModel{
+    NSString* account = [self.userdefaults valueForKey:savedAccountKey];
+    NSString* password = [self.userdefaults valueForKey:savedPasswordKey];
+    UserAccountModel* accountModel = nil;
+    if (account && [account isNotBlank]) {
+        accountModel = [[UserAccountModel alloc] initWithAccount:account password:password];
+    }
+    return accountModel;
+}
+
 - (void) setLoginedUserAccount:(UserAccountModel *)loginedUserAccount{
     if (!loginedUserAccount) {
         [self.userdefaults removeObjectForKey:loginedUserAccountKey];
@@ -60,6 +73,9 @@ static NSString* kidInfoModelKey = @"kidInfoModel";
     else{
         NSDictionary* accountDictionary = [loginedUserAccount mj_keyValues];
         [self.userdefaults setValue:accountDictionary forKey:loginedUserAccountKey];
+        
+        [self.userdefaults setValue:loginedUserAccount.account forKey:savedAccountKey];
+        [self.userdefaults setValue:loginedUserAccount.password forKey:savedPasswordKey];
     }
     
     [self.userdefaults synchronize];
@@ -81,6 +97,8 @@ static NSString* kidInfoModelKey = @"kidInfoModel";
     else{
         NSDictionary* userDictionary = [loginedUserModel mj_keyValues];
         [self.userdefaults setValue:userDictionary forKey:loginedUserKey];
+        
+        
     }
     
     [self.userdefaults synchronize];

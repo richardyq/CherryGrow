@@ -16,6 +16,8 @@
 
 + (UserDefaults*) shareInstance;
 
+- (UserAccountModel*) savedAccountModel;
+
 /*
  loginedUserAccount
  已经登录的用户账号
